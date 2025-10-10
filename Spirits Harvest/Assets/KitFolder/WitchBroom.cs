@@ -44,19 +44,15 @@ public class WitchBroom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (collision.tag == "Enemy")
         {
-            if (collision.tag == "Enemy")
-            {
-                collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
-                Debug.Log("Enemy hit");
+            collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
+            Debug.Log("Enemy hit");
 
-            }
-            else
-            {
-                Debug.Log("No Enemy");
-            }
+        }
+    else
+        {
+            Debug.Log("No Enemy");
         }
     }
 }

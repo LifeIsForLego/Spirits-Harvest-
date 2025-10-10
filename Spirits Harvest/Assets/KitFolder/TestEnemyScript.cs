@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TestEnemyScript : MonoBehaviour
@@ -12,7 +13,7 @@ public class TestEnemyScript : MonoBehaviour
 
     public void TakeDamage(float damage, float knockback)
     {
-        
+        Debug.Log("test");
         enemyHealth -= damage;
         float xVector = knockback;
         transform.position = (Vector2.right * xVector).normalized;
@@ -23,6 +24,11 @@ public class TestEnemyScript : MonoBehaviour
             Destroy(gameObject);
             Debug.Log("Enemy dead");
         }
+    }
+
+    public void EnemyMove()
+    {
+
     }
 
 
