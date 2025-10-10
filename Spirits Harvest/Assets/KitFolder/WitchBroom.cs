@@ -1,11 +1,26 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WitchBroom : MonoBehaviour
 {
+    private InputActionAsset broomControls;
+    private string actionMapName = "Broom";
+    private string move = "Move";
+    private string attack = "Attack";
+    //protected float speed = 1.0f;
 
-    
-    protected float speed = 1.0f;
+    private InputAction moveAction;
+    private InputAction attackAction;
+
+    public Vector2 MoveInput { get; private set; }
+    public bool AttackTriggered { get; private set; }
+
+
+
+
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
