@@ -8,7 +8,7 @@ public class TestEnemyScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    private float enemyHealth = 5.0f;
+    public float enemyHealth = 5.0f;
     Rigidbody2D enemy;
     private bool moving = false;
 
@@ -17,7 +17,8 @@ public class TestEnemyScript : MonoBehaviour
     {
         Debug.Log("test");
         enemyHealth -= damage;
-        float xVector = knockback;
+        //float xVector = knockback;
+        transform.Translate(Vector3.right * knockback);
 
 
         if (enemyHealth <= 0f)
@@ -30,11 +31,8 @@ public class TestEnemyScript : MonoBehaviour
     public void EnemyMove()
     {
         float speed = 2.0f;
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            moving = true;
-            transform.Translate(Vector3.left * speed *  )
-        }
+        moving = true;
+        transform.Translate(Vector3.left * speed );
 
     }
 
