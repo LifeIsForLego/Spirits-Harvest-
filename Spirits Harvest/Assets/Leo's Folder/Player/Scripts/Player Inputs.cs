@@ -8,13 +8,20 @@ public class PlayerInputs : MonoBehaviour
 
     [SerializeField] InputActionAsset playerinputs;
 
-    [SerializeField] string actionMapName = "PlayerMovement";
+    [SerializeField] string MovementMapName = "PlayerMovement";
+
+    [SerializeField] string InteractMapName = "PlayerInteractions";
 
     [SerializeField] string move = "Move";
 
+    [SerializeField] string interact = "Interact";
+
     InputAction moveAction;
+    InputAction interactAction;
 
     public Vector2 MoveInput;
+    public bool InteractInput;
+
 
     string facing;
 
@@ -22,7 +29,8 @@ public class PlayerInputs : MonoBehaviour
     {
         instance = this;
 
-        moveAction = playerinputs.FindActionMap(actionMapName).FindAction(move);//
+        moveAction = playerinputs.FindActionMap(MovementMapName).FindAction(move);
+        interactAction = playerinputs.FindActionMap(InteractMapName).FindAction(interact);
 
         RegisterInputs();
     }
@@ -31,15 +39,20 @@ public class PlayerInputs : MonoBehaviour
     {
         moveAction.performed += context => MoveInput = context.ReadValue<Vector2>();
         moveAction.canceled += context => MoveInput = Vector2.zero;
+
+        interactAction.performed += context => InteractInput = true;
+        interactAction.canceled += context => InteractInput = false;
     }
 
     private void OnEnable()
     {
         moveAction.Enable();
+        interactAction.Enable();
     }
     private void OnDisable()
     {
-        moveAction.Disable();//
+        moveAction.Disable();
+        interactAction.Disable();
     }
 
 

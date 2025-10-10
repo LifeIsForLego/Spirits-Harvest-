@@ -47,7 +47,11 @@ public class IdleState : BlankState
     {
         if(player!=null)
         {
-            if(player.inputs.Moving())
+            if(player.interacting)
+            {
+                player.ChangeState(player.interactionState);
+            }
+            else if(player.inputs.Moving())
             {
                 player.ChangeState(player.moveState);
             }

@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class MoveState : BlankState
+public class InteractionState : BlankState
 {
 
     public override void enterState(PlayerManager player)
     {
-        Debug.Log("MoveState");
+        Debug.Log("InteractionState");
     }
 
     public override void exitState(PlayerManager player)
@@ -15,10 +15,7 @@ public class MoveState : BlankState
 
     public override void Move(PlayerManager player)
     {
-        if (player != null)
-        {
-            player.move.Move();
-        }
+
     }
 
     public override void useTools(PlayerManager player)
@@ -28,7 +25,17 @@ public class MoveState : BlankState
 
     public override void Interact(PlayerManager player)
     {
-
+        if(player != null)
+        {
+            if(player.interactTimer <= 0)
+            {
+                player.InteractionEnd();
+            }
+            else
+            {
+                player.interactTimer -= Time.deltaTime;
+            }
+        }
     }
 
     public override void Carving(PlayerManager player)
@@ -38,18 +45,18 @@ public class MoveState : BlankState
 
     public override void updateState(PlayerManager player)
     {
-        Move(player);
+        Interact(player);
 
         handleState(player);
     }
 
     public override void handleState(PlayerManager player)
     {
-        if (player != null)
+        if (player != null && !player.interacting)
         {
-            if (player.interacting)
+            if (player.inputs.Moving())
             {
-                player.ChangeState(player.interactionState);
+                player.ChangeState(player.moveState);
             }
             else if (!player.inputs.Moving())
             {

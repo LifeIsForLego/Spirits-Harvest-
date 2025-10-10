@@ -1,3 +1,4 @@
+using Unity.Multiplayer.Center.Common.Analytics;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -9,6 +10,11 @@ public class PlayerManager : MonoBehaviour
     BlankState currentState;
     public IdleState idleState = new IdleState();
     public MoveState moveState = new MoveState();
+    public InteractionState interactionState = new InteractionState();
+
+    public bool interacting;
+    public float interactTick;
+    public float interactTimer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,6 +25,10 @@ public class PlayerManager : MonoBehaviour
 
         currentState = idleState;
         currentState.enterState(this);
+
+        interacting = false;
+        interactTick = 0.25f;
+        interactTimer = 0;
     }
 
     // Update is called once per frame
@@ -32,5 +42,17 @@ public class PlayerManager : MonoBehaviour
         currentState.exitState(this);
         currentState = state;
         currentState.enterState(this);
+    }
+
+    public void InteractionStart()
+    {
+        interacting = true;
+
+        interactTimer = interactTick;
+    }
+
+    public void InteractionEnd()
+    {
+        interacting = false;
     }
 }

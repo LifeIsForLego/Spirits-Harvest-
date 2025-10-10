@@ -1,0 +1,45 @@
+using UnityEngine;
+
+public class InteractCheck : MonoBehaviour
+{
+    GameObject player;
+    PlayerInputs inputs;
+    PlayerManager manager;
+
+    bool canInteract; //overlapping witht the player
+    bool Interactable; //is currently able to be interacted with
+
+    [SerializeField]bool oneTime; //if true, then destroys itself on pickup
+    [SerializeField]string item; //if it has an item attached to it, this is where the name of it is stored
+    [SerializeField]int value; //if the player picks it up and obtains a multiple of the item this is how many items it is
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        player = PlayerInputs.GetInstance().gameObject;
+        inputs = player.GetComponent<PlayerInputs>();
+        manager = player.GetComponent<PlayerManager>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(canInteract && inputs.InteractInput)
+        {
+            manager.InteractionStart();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.CompareTag("Player"))
+        {
+            canInteract = true;
+        }
+    }
+
+    void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
+}
