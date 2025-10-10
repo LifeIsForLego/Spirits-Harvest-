@@ -372,10 +372,11 @@ GameObject:
   - component: {fileID: 1479821934}
   - component: {fileID: 1479821933}
   - component: {fileID: 1479821932}
+  - component: {fileID: 1479821935}
   - component: {fileID: 1479821931}
   - component: {fileID: 1479821930}
   - component: {fileID: 1479821929}
-  - component: {fileID: 1479821935}
+  - component: {fileID: 1479821936}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -410,6 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputs: {fileID: 0}
   move: {fileID: 0}
+  dict: {fileID: 0}
   interacting: 0
   interactTick: 0
   interactTimer: 0
@@ -575,6 +577,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5163801, y: 0.87481415}
   m_EdgeRadius: 0
+--- !u!114 &1479821936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479821928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b968ba422d604e84b87cddcd0a39e875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

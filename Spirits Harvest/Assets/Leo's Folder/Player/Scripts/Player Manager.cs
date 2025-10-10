@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
     GameObject player;
     public PlayerInputs inputs;
     public PlayerMovement move;
+    public PlayerDictionary dict;
 
     BlankState currentState;
     public IdleState idleState = new IdleState();
@@ -25,6 +26,7 @@ public class PlayerManager : MonoBehaviour
         player = PlayerInputs.GetInstance().gameObject;
         inputs = player.GetComponent<PlayerInputs>();
         move = player.GetComponent<PlayerMovement>();
+        dict = player.GetComponent<PlayerDictionary>();
 
         currentState = idleState;
         currentState.enterState(this);
