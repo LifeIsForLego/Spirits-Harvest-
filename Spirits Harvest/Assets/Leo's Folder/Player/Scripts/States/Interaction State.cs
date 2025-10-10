@@ -30,6 +30,8 @@ public class InteractionState : BlankState
             if(player.interactTimer <= 0)
             {
                 player.InteractionEnd();
+
+                Debug.Log(player.GetTempItemName() + player.GetTempItemValue());
             }
             else
             {

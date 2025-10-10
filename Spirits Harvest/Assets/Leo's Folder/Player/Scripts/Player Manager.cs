@@ -16,6 +16,9 @@ public class PlayerManager : MonoBehaviour
     public float interactTick;
     public float interactTimer;
 
+    string tempItemName;
+    int tempItemValue;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +32,9 @@ public class PlayerManager : MonoBehaviour
         interacting = false;
         interactTick = 0.25f;
         interactTimer = 0;
+
+        tempItemName = "null";
+        tempItemValue = 0;
     }
 
     // Update is called once per frame
@@ -44,11 +50,14 @@ public class PlayerManager : MonoBehaviour
         currentState.enterState(this);
     }
 
-    public void InteractionStart()
+    public void InteractionStart(string itemName, int itemValue)
     {
         interacting = true;
 
         interactTimer = interactTick;
+
+        tempItemName = itemName;
+        tempItemValue = itemValue;
     }
 
     public void InteractionEnd()
@@ -59,5 +68,14 @@ public class PlayerManager : MonoBehaviour
     public float GetInteractTick()
     {
         return interactTick;
+    }
+
+    public string GetTempItemName()
+    {
+        return tempItemName;
+    }
+    public int GetTempItemValue()
+    {
+        return tempItemValue;
     }
 }

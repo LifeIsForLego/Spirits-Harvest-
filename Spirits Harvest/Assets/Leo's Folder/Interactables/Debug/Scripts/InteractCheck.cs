@@ -28,7 +28,7 @@ public class InteractCheck : MonoBehaviour
     {
         if(canInteract && inputs.InteractInput)
         {
-            manager.InteractionStart();
+            manager.InteractionStart(item,value); //for the love of god put "null" and 0 if you want them blank
             if (oneTime)
             {
                 Timer = manager.GetInteractTick();
