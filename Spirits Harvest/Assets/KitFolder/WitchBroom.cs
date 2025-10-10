@@ -32,7 +32,8 @@ public class WitchBroom : MonoBehaviour
             {
                 broomCooldown = broomSpeed;
             }
-            else
+         
+        else
             {
                 broomCooldown -= Time.deltaTime;
             }
@@ -48,11 +49,10 @@ public class WitchBroom : MonoBehaviour
         {
             if (collision.tag == "Enemy")
             {
-                collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage,broomKnockback);
+                collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
                 Debug.Log("Enemy hit");
 
             }
-
             else
             {
                 Debug.Log("No Enemy");

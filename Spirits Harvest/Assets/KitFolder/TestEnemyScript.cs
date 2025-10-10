@@ -15,7 +15,7 @@ public class TestEnemyScript : MonoBehaviour
         
         enemyHealth -= damage;
         float xVector = knockback;
-
+        transform.position = (Vector2.right * xVector).normalized;
 
 
         if (enemyHealth <= 0f )
