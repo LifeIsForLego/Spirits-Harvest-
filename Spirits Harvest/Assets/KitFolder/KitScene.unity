@@ -136,12 +136,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5477232673392378075, guid: 6389ee6afdf204f48bcf3613568e5b69, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1369
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477232673392378075, guid: 6389ee6afdf204f48bcf3613568e5b69, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.91
+      value: 0.90599
       objectReference: {fileID: 0}
     - target: {fileID: 5477232673392378075, guid: 6389ee6afdf204f48bcf3613568e5b69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: 0.012745
       objectReference: {fileID: 0}
     - target: {fileID: 5477232673392378075, guid: 6389ee6afdf204f48bcf3613568e5b69, type: 3}
       propertyPath: m_LocalPosition.z
@@ -622,6 +626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   broomCooldown: 2
   isAttacking: 0
+  attack: 1
 --- !u!50 &8175311954803353305
 Rigidbody2D:
   serializedVersion: 5
