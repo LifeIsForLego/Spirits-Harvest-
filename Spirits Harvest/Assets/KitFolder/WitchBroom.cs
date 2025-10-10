@@ -26,6 +26,8 @@ public class WitchBroom : MonoBehaviour
 
 
     // Update is called once per frame
+    
+    
     void Update()
     {
         if (broomCooldown <= 0f)
@@ -46,7 +48,7 @@ public class WitchBroom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.tag == "Enemy" && Input.GetKeyDown(KeyCode.R))
         {
             // Will trigger the TakeDamage script
             collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
