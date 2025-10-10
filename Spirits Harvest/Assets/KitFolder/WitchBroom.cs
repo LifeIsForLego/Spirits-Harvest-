@@ -37,32 +37,28 @@ public class WitchBroom : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("Attacking");
+            //Debug.Log("Attacking");
             isAttacking = true;
         }
 
-        else
-        {
-            isAttacking = false;
-        }
-
-        if (broomCooldown > 0f)
-        {
-            broomCooldown -= Time.deltaTime;
-        }
-        else if (broomCooldown <= 0f)
-        {
-            broomCooldown = broomSpeed;
-            broomCooldown -= Time.deltaTime;
-        }
+        //if (broomCooldown > 0f)
+        //{
+        //    broomCooldown -= Time.deltaTime;
+        //}
+       // else if (broomCooldown <= 0f)
+        //{
+       //     broomCooldown = broomSpeed;
+       //     broomCooldown -= Time.deltaTime;
+        //}
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
             if (collision.tag == "Enemy" && isAttacking == true)
             {
-                // Will trigger the TakeDamage script
-
+            // Will trigger the TakeDamage script
+                Debug.Log("Why??");
+                isAttacking = false;
                 collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
                 Debug.Log("Enemy hit");
             }
