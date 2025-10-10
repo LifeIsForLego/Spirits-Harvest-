@@ -14,7 +14,9 @@ public class PlayerInputs : MonoBehaviour
 
     InputAction moveAction;
 
-    public Vector2 MoveInput { get; private set; }
+    public Vector2 MoveInput;
+
+    string facing;
 
     private void Awake()
     {
@@ -40,6 +42,16 @@ public class PlayerInputs : MonoBehaviour
         moveAction.Disable();//
     }
 
+
+
+
+
+
+    void Update()
+    {
+        currentDirection();
+    }
+
     public bool Moving()
     {
         if(Mathf.Abs(MoveInput.x) > 0 || Mathf.Abs(MoveInput.y) > 0)
@@ -47,6 +59,55 @@ public class PlayerInputs : MonoBehaviour
             return true;
         }
         return false;
-    }    
+    }
+
+    void currentDirection()
+    {
+        //N y = 1 x = 0
+        if (MoveInput.x == 0 && MoveInput.y > 0)
+        {
+            facing = "North";
+        }
+        //NE y = 1 x = 1
+        else if (MoveInput.x > 0 && MoveInput.y > 0)
+        {
+            facing = "NorthEast";
+        }
+        //E y = 0 x = 1
+        else if (MoveInput.x > 0 && MoveInput.y == 0)
+        {
+            facing = "East";
+        }
+        //SE y = -1 x = 1
+        else if (MoveInput.x > 0 && MoveInput.y < 0)
+        {
+            facing = "SouthEast";
+        }
+        //S y = -1 x = 0
+        else if (MoveInput.x == 0 && MoveInput.y < 0)
+        {
+            facing = "South";
+        }
+        //SW y = -1 x = -1
+        else if (MoveInput.x < 0 && MoveInput.y < 0)
+        {
+            facing = "SouthWest";
+        }
+        //W y = 0 x = -1
+        else if (MoveInput.x < 0 && MoveInput.y == 0)
+        {
+            facing = "West";
+        }
+        //NW y = 1 x = -1
+        else if (MoveInput.x < 0 && MoveInput.y > 0)
+        {
+            facing = "NorthWest";
+        }
+    }
+
+    public string GetDirection()
+    {
+        return facing;
+    }
 
 }
