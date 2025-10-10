@@ -15,6 +15,14 @@ public class WitchBroom : MonoBehaviour
     public void BroomAttack()
     {
 
+
+    }
+
+    public void BroomMove()
+    {
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+        }
     }
 
 
