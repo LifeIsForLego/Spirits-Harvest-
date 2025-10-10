@@ -4,8 +4,8 @@ using UnityEngine;
 public class WitchBroom : MonoBehaviour
 {
 
-    Rigidbody2D rigidbody;
-    private float speed = 1.0f;
+    
+    protected float speed = 1.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,9 +24,6 @@ public class WitchBroom : MonoBehaviour
 
     public void BroomMove()
     {
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-        }
     }
 
 
