@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class TestEnemyScript : MonoBehaviour
@@ -5,11 +7,16 @@ public class TestEnemyScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private float enemyHealth = 5.0f;
+    Rigidbody2D enemy;
 
 
-    public void TakeDamage(float broomDamage)
+    public void TakeDamage(float damage, float knockback)
     {
-        enemyHealth -= broomDamage;
+        
+        enemyHealth -= damage;
+        float xVector = knockback;
+
+
 
         if (enemyHealth <= 0f )
         {

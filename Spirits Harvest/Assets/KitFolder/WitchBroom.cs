@@ -9,6 +9,8 @@ public class WitchBroom : MonoBehaviour
 
     private float broomDamage = 1.0f;
 
+    private float broomKnockback = 1.0f;
+
     public float broomCooldown;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,7 +48,7 @@ public class WitchBroom : MonoBehaviour
         {
             if (collision.tag == "Enemy")
             {
-                collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage);
+                collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage,broomKnockback);
                 Debug.Log("Enemy hit");
 
             }
