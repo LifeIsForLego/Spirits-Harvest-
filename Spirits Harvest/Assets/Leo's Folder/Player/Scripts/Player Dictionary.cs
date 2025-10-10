@@ -9,7 +9,6 @@ public class PlayerDictionary : MonoBehaviour
     void Start()
     {
         ResetHeldItems();
-        Debug.Log(HeldItems);
     }
 
     // Update is called once per frame
@@ -28,8 +27,6 @@ public class PlayerDictionary : MonoBehaviour
         {
             HeldItems[item] = value;
         }
-
-        Debug.Log(item + HeldItems[item]);
     }
 
     public void ResetHeldItems()

@@ -6,6 +6,8 @@ public class InteractionState : BlankState
     public override void enterState(PlayerManager player)
     {
         Debug.Log("InteractionState");
+
+        player.move.noMove();
     }
 
     public override void exitState(PlayerManager player)

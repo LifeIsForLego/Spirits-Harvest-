@@ -46,6 +46,14 @@ public class InteractCheck : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D coll)
+    {
+        if (coll.CompareTag("Player"))
+        {
+            canInteract = false;
+        }
+    }
+
     void DestroySelf()
     {
         Destroy(gameObject);
