@@ -269,11 +269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3700808277573071474, guid: 4b823b5adf916984084937fa0dbe0415, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.46
+      value: -1.79
       objectReference: {fileID: 0}
     - target: {fileID: 3700808277573071474, guid: 4b823b5adf916984084937fa0dbe0415, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.51
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 3700808277573071474, guid: 4b823b5adf916984084937fa0dbe0415, type: 3}
       propertyPath: m_LocalPosition.z
@@ -523,11 +523,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3103502767207786667, guid: a0fb875d987ad0445a7345b07e728d3c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.47
+      value: -3.99
       objectReference: {fileID: 0}
     - target: {fileID: 3103502767207786667, guid: a0fb875d987ad0445a7345b07e728d3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 3103502767207786667, guid: a0fb875d987ad0445a7345b07e728d3c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d04441b0b2c0234f84a3f5b7c1f07f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  broomCooldown: 0
+  broomCooldown: 1
 --- !u!50 &8175311954803353305
 Rigidbody2D:
   serializedVersion: 5
@@ -632,7 +632,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

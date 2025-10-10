@@ -41,8 +41,8 @@ public class WitchBroom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (collision.tag == "Enemy")
             {
@@ -50,10 +50,11 @@ public class WitchBroom : MonoBehaviour
                 Debug.Log("Enemy hit");
 
             }
-        }
-        else
-        {
-            Debug.Log("No enemy");
+
+            else
+            {
+                Debug.Log("No Enemy");
+            }
         }
     }
 }
