@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 1866180820}
   - component: {fileID: 1866180819}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Broom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
