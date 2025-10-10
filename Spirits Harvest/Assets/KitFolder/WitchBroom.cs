@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,7 +16,9 @@ public class WitchBroom : MonoBehaviour
     //Stop spamming of it? Not sure if this works
     public float broomCooldown;
 
-    private bool isAttacking = false;
+    public bool isAttacking = false;
+
+    public int attack = 1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,31 +35,36 @@ public class WitchBroom : MonoBehaviour
     
     void Update()
     {
-        if (broomCooldown <= 0f)
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                broomCooldown = broomSpeed;
-                isAttacking = true;
-            }
-         
-        else
-            {
-                broomCooldown -= Time.deltaTime;
-            }
+            Debug.Log("Attacking");
+            isAttacking = true;
+        }
 
+        if (broomCooldown > 0f)
+        {
+            broomCooldown -= Time.deltaTime;
+        }
+        else if (broomCooldown <= 0f)
+        {
 
+            broomCooldown = broomSpeed;
+            broomCooldown -= Time.deltaTime;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && isAttacking == true)
+        if (isAttacking == true)
         {
-            // Will trigger the TakeDamage script
+            if (collision.tag == "Enemy")
+            {
+                // Will trigger the TakeDamage script
 
-            collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
-            Debug.Log("Enemy hit");
+                collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
+                Debug.Log("Enemy hit");
+            }
+
         }
 
     }

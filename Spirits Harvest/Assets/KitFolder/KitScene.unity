@@ -239,8 +239,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.5773587}
+    - - {x: 0.45736948, y: 0.20224628}
+      - {x: 0, y: 0.5773587}
+      - {x: -0.38224062, y: 0.23457387}
       - {x: -0.5, y: -0.28866667}
+      - {x: 0.0012630118, y: -0.46488053}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
 --- !u!1001 &1627279132
@@ -313,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6599150442838611216, guid: 4b823b5adf916984084937fa0dbe0415, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -617,7 +620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d04441b0b2c0234f84a3f5b7c1f07f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  broomCooldown: 1
+  broomCooldown: 2
+  isAttacking: 0
 --- !u!50 &8175311954803353305
 Rigidbody2D:
   serializedVersion: 5
