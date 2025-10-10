@@ -4,13 +4,15 @@ using UnityEngine.InputSystem;
 
 public class WitchBroom : MonoBehaviour
 {
-
+    
     private float broomSpeed = 1.0f;
 
     private float broomDamage = 1.0f;
 
+    //Used for affecting how far back enemies will move
     private float broomKnockback = 2.0f;
 
+    //Stop spamming of it? Not sure if this works
     public float broomCooldown;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,13 +48,10 @@ public class WitchBroom : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
+            // Will trigger the TakeDamage script
             collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
             Debug.Log("Enemy hit");
 
-        }
-    else
-        {
-            Debug.Log("No Enemy");
         }
     }
 }
