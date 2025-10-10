@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
 
     BlankState currentState;
     public IdleState idleState = new IdleState();
+    public MoveState moveState = new MoveState();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,5 +25,12 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         currentState.updateState(this);
+    }
+
+    public void ChangeState(BlankState state)
+    {
+        currentState.exitState(this);
+        currentState = state;
+        currentState.enterState(this);
     }
 }
