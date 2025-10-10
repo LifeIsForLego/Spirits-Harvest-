@@ -55,4 +55,9 @@ public class PlayerManager : MonoBehaviour
     {
         interacting = false;
     }
+
+    public float GetInteractTick()
+    {
+        return interactTick;
+    }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class InteractCheck : MonoBehaviour
@@ -8,6 +9,7 @@ public class InteractCheck : MonoBehaviour
 
     bool canInteract; //overlapping witht the player
     bool Interactable; //is currently able to be interacted with
+    float Timer;
 
     [SerializeField]bool oneTime; //if true, then destroys itself on pickup
     [SerializeField]string item; //if it has an item attached to it, this is where the name of it is stored
@@ -27,6 +29,12 @@ public class InteractCheck : MonoBehaviour
         if(canInteract && inputs.InteractInput)
         {
             manager.InteractionStart();
+            if (oneTime)
+            {
+                Timer = manager.GetInteractTick();
+                Debug.Log(Timer);
+                StartCoroutine(DeleteSelf());
+            }
         }
     }
 
@@ -41,5 +49,11 @@ public class InteractCheck : MonoBehaviour
     void DestroySelf()
     {
         Destroy(gameObject);
+    }
+
+    IEnumerator DeleteSelf()
+    {
+        yield return new WaitForSeconds(Timer);
+        DestroySelf();
     }
 }
