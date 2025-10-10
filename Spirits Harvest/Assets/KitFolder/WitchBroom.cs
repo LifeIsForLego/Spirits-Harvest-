@@ -41,23 +41,25 @@ public class WitchBroom : MonoBehaviour
             isAttacking = true;
         }
 
+        else
+        {
+            isAttacking = false;
+        }
+
         if (broomCooldown > 0f)
         {
             broomCooldown -= Time.deltaTime;
         }
         else if (broomCooldown <= 0f)
         {
-
             broomCooldown = broomSpeed;
             broomCooldown -= Time.deltaTime;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (isAttacking == true)
-        {
-            if (collision.tag == "Enemy")
+            if (collision.tag == "Enemy" && isAttacking == true)
             {
                 // Will trigger the TakeDamage script
 
@@ -65,7 +67,7 @@ public class WitchBroom : MonoBehaviour
                 Debug.Log("Enemy hit");
             }
 
-        }
+
 
     }
 }
