@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    float speed;
+    public float speed = 5f;
 
     Transform targetPoint;
     int waypointIndex;
@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        Vector3 dir = targetPoint.position -transform.position;
+        Vector3 dir = targetPoint.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime);
 
         if(Vector3.Distance(transform.position, targetPoint.position) <= 0.2f)
