@@ -359,8 +359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oneTime: 0
-  item: 
-  value: 0
+  item: Pumpkin
+  value: 50
 --- !u!1 &1479821928
 GameObject:
   m_ObjectHideFlags: 0
