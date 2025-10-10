@@ -9,7 +9,7 @@ public class WitchBroom : MonoBehaviour
 
     private float broomDamage = 1.0f;
 
-    private float broomKnockback = 1.0f;
+    private float broomKnockback = 2.0f;
 
     public float broomCooldown;
 

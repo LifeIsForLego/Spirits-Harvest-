@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class TestEnemyScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TestEnemyScript : MonoBehaviour
 
     private float enemyHealth = 5.0f;
     Rigidbody2D enemy;
+    private bool moving = false;
 
 
     public void TakeDamage(float damage, float knockback)
@@ -16,10 +18,9 @@ public class TestEnemyScript : MonoBehaviour
         Debug.Log("test");
         enemyHealth -= damage;
         float xVector = knockback;
-        transform.position = (Vector2.right * xVector).normalized;
 
 
-        if (enemyHealth <= 0f )
+        if (enemyHealth <= 0f)
         {
             Destroy(gameObject);
             Debug.Log("Enemy dead");
@@ -28,6 +29,12 @@ public class TestEnemyScript : MonoBehaviour
 
     public void EnemyMove()
     {
+        float speed = 2.0f;
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            moving = true;
+            transform.Translate(Vector3.left * speed *  )
+        }
 
     }
 
@@ -35,12 +42,15 @@ public class TestEnemyScript : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EnemyMove();
+        }
     }
 }
