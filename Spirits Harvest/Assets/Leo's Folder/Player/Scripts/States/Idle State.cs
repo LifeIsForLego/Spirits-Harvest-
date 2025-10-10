@@ -15,9 +15,9 @@ public class IdleState : BlankState
 
     public override void Move(PlayerManager player)
     {
-        if(player == null)
+        if(player != null)
         {
-
+            player.move.Move();
         }
     }
 
