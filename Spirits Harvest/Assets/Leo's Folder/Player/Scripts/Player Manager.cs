@@ -80,4 +80,9 @@ public class PlayerManager : MonoBehaviour
     {
         return tempItemValue;
     }
+    public void resetTempvals()
+    {
+        tempItemName="null";
+        tempItemValue=0;
+    }
 }

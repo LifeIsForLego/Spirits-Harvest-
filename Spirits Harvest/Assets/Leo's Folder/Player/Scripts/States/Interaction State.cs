@@ -35,6 +35,8 @@ public class InteractionState : BlankState
                 int value = player.GetTempItemValue();
 
                 player.dict.AddItem(name,value);
+
+
             }
             else
             {

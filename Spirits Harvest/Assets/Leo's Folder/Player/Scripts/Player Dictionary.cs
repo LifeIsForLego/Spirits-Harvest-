@@ -8,7 +8,8 @@ public class PlayerDictionary : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        ResetHeldItems();
+        Debug.Log(HeldItems);
     }
 
     // Update is called once per frame
@@ -34,13 +35,16 @@ public class PlayerDictionary : MonoBehaviour
     public void ResetHeldItems()
     {
         HeldItems.Clear();
+        AddItem("Pumpkin", 0);
+        AddItem("Candle", 0);
     }
 
     public void RemoveItem(string item, int value)
     {
         if(value == 0) //if 0 is passed, removes item completely
         {
-            HeldItems.Remove(item);
+            //HeldItems.Remove(item);
+            Debug.Log("error, you put a 0 here dummy");
         }
         else
         {
@@ -48,12 +52,17 @@ public class PlayerDictionary : MonoBehaviour
 
             if(newValue <= 0) //if the new value is equal to or below 0, it removes the item completely
             {
-                HeldItems.Remove(item);
+                //HeldItems.Remove(item);
             }
             else
             {
                 HeldItems[item] = newValue; //sets the item to the new value
             }
         }
+    }
+
+    public int GetItem(string item)
+    {
+        return HeldItems[item];
     }
 }
