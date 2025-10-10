@@ -15,6 +15,8 @@ public class WitchBroom : MonoBehaviour
     //Stop spamming of it? Not sure if this works
     public float broomCooldown;
 
+    private bool isAttacking = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +37,7 @@ public class WitchBroom : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 broomCooldown = broomSpeed;
+                isAttacking = true;
             }
          
         else
@@ -48,12 +51,13 @@ public class WitchBroom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && Input.GetKeyDown(KeyCode.R))
+        if (collision.tag == "Enemy" && isAttacking == true)
         {
             // Will trigger the TakeDamage script
+
             collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
             Debug.Log("Enemy hit");
-
         }
+
     }
 }
