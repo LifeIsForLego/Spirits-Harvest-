@@ -5,7 +5,7 @@ public class IdleState : BlankState
 
     public override void enterState(PlayerManager player)
     {
-        Debug.Log("IdleState");
+        //Debug.Log("IdleState");
     }
 
     public override void exitState(PlayerManager player)

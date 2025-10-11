@@ -5,7 +5,7 @@ public class MoveState : BlankState
 
     public override void enterState(PlayerManager player)
     {
-        Debug.Log("MoveState");
+        //Debug.Log("MoveState");
     }
 
     public override void exitState(PlayerManager player)

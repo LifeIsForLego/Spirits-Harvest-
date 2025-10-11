@@ -12,6 +12,9 @@ public class TileInteractCheck : MonoBehaviour
     PlayerInputs inputs;
     PlayerManager manager;
 
+    TileSwapping swap;
+
+
     [SerializeField]Tilemap cropMap;
 
     [SerializeField]List<CropData> Data;
@@ -22,6 +25,7 @@ public class TileInteractCheck : MonoBehaviour
 
     bool canInteract; //overlapping witht the player
     bool Interactable; //is currently able to be interacted with
+    bool canPlant;
     float Timer;
 
     Vector3Int tempPos;
@@ -49,6 +53,8 @@ public class TileInteractCheck : MonoBehaviour
         player = PlayerInputs.GetInstance().gameObject;
         inputs = player.GetComponent<PlayerInputs>();
         manager = player.GetComponent<PlayerManager>();
+
+        swap = GetComponent<TileSwapping>();
     }
 
     // Update is called once per frame
@@ -60,9 +66,14 @@ public class TileInteractCheck : MonoBehaviour
             if (oneTime)
             {
                 Timer = manager.GetInteractTick();
-                Debug.Log(Timer);
                 StartCoroutine(DeleteSelf());
             }
+        }
+        else if(canPlant && inputs.InteractInput)
+        {
+            manager.InteractionStart("null", 0);
+            Vector3Int gridpos = cropMap.WorldToCell(player.transform.position);
+            swap.AddPumpkin(gridpos);
         }
     }
 
@@ -79,10 +90,12 @@ public class TileInteractCheck : MonoBehaviour
             {
 
                 bool state = tileDict[tile].Interactable;
+                bool plant = tileDict[tile].canPlant;
 
                 //Debug.Log(state);
 
                 canInteract = state;
+                canPlant = plant;
                 tempPos = gridpos;
 
                 item = tileDict[tile].crops;
@@ -91,6 +104,7 @@ public class TileInteractCheck : MonoBehaviour
             else
             {
                 canInteract = false;
+                canPlant = false;
             }
 
 
@@ -102,6 +116,7 @@ public class TileInteractCheck : MonoBehaviour
         if (coll.CompareTag("Player"))
         {
             canInteract = false;
+            canPlant = false;
         }
     }
 

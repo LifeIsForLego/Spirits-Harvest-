@@ -5,15 +5,15 @@ public class InteractionState : BlankState
 
     public override void enterState(PlayerManager player)
     {
-        Debug.Log("InteractionState");
+        //Debug.Log("InteractionState");
 
         player.move.noMove();
     }
 
     public override void exitState(PlayerManager player)
     {
-        Debug.Log("Pumpkins= " + player.dict.GetItem("Pumpkin"));
-        Debug.Log("Candles= " + player.dict.GetItem("Candle"));
+        //Debug.Log("Pumpkins= " + player.dict.GetItem("Pumpkin"));
+        //Debug.Log("Candles= " + player.dict.GetItem("Candle"));
     }
 
     public override void Move(PlayerManager player)

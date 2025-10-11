@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca71c99f90b3cb146b2675606f7c29de, type: 3}
-  m_Name: EmptyPlot
+  m_Name: Pumpkin 2
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 11400000, guid: 572bf7363e2c8fe4c9f7c7cca9cab6ae, type: 2}
-  crops: null
+  tiles: []
+  crops: 
+  value: 0
+  Interactable: 0
+  canPlant: 0
+  growthTimer: 0
