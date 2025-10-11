@@ -8,6 +8,8 @@ public class CropData : ScriptableObject
 
     public string crops;
 
+    public bool Interactable;
+
     private void Awake()
     {
         Debug.Log("Pumpkin can start growing");

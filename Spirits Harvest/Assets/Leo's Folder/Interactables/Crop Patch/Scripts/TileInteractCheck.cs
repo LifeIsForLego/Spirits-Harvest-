@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
 
 public class TileInteractCheck : MonoBehaviour
@@ -8,10 +10,14 @@ public class TileInteractCheck : MonoBehaviour
     GameObject player;
     PlayerInputs inputs;
     PlayerManager manager;
-    
-    Tilemap cropMap;
 
-    [SerializeField] CropData Pumpkin;
+    [SerializeField]Tilemap cropMap;
+
+    [SerializeField]List<CropData> Data;
+
+    Dictionary<TileBase, CropData> tileDict;
+
+    [SerializeField]CropData emptyPlot;
 
     bool canInteract; //overlapping witht the player
     bool Interactable; //is currently able to be interacted with
@@ -21,14 +27,25 @@ public class TileInteractCheck : MonoBehaviour
     [SerializeField] string item; //if it has an item attached to it, this is where the name of it is stored
     [SerializeField] int value; //if the player picks it up and obtains a multiple of the item this is how many items it is
 
+    private void Awake()
+    {
+        tileDict = new Dictionary<TileBase, CropData>();
+
+        foreach (var cropData in Data)
+        {
+            foreach (var tile in cropData.tiles)
+            {
+                tileDict.Add(tile, cropData);
+            }
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = PlayerInputs.GetInstance().gameObject;
         inputs = player.GetComponent<PlayerInputs>();
         manager = player.GetComponent<PlayerManager>();
-
-        cropMap = GetComponent<Tilemap>();
     }
 
     // Update is called once per frame
@@ -46,20 +63,34 @@ public class TileInteractCheck : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D coll)
+    private void OnTriggerStay2D(Collider2D coll)
     {
-        Vector3Int pos = cropMap.WorldToCell(coll.transform.position);
-        if (cropMap.GetTile(pos) == Pumpkin.tiles[4])
+        
+        if (coll.CompareTag("Player"))
         {
-            item = Pumpkin.crops;
-            value = 1;
+            Debug.Log("Overlap");
+            Vector3Int gridpos = cropMap.WorldToCell(player.transform.position);
 
-            if (coll.CompareTag("Player"))
+            TileBase tile = cropMap.GetTile(gridpos);
+
+            Debug.Log(tile);
+
+            if (tile != null)
             {
-                canInteract = true;
+
+                bool state = tileDict[tile].Interactable;
+
+                //Debug.Log(state);
+
+                canInteract = state;
+                Debug.Log("Overlap Successful");
+            }
+            else
+            {
+                canInteract = false;
             }
 
-            Debug.Log("maybe");
+
         }
     }
 
