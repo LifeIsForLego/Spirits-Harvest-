@@ -857,9 +857,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5a85cc333d2ce49bb6116a908c33c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pumpkin: {fileID: 11400000, guid: a507b44466886bd40afe0237a8e58152, type: 2}
+  cropMap: {fileID: 1724882605}
+  Data:
+  - {fileID: 11400000, guid: a507b44466886bd40afe0237a8e58152, type: 2}
+  - {fileID: 11400000, guid: 52e7213558c45fb41ba7af593b0fa39f, type: 2}
+  emptyPlot: {fileID: 11400000, guid: 52e7213558c45fb41ba7af593b0fa39f, type: 2}
   oneTime: 1
-  item: 
+  item: null
   value: 0
 --- !u!1001 &2106689820
 PrefabInstance:

@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.Tilemaps;
+using static UnityEditor.PlayerSettings;
 
 public class TileInteractCheck : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class TileInteractCheck : MonoBehaviour
     bool canInteract; //overlapping witht the player
     bool Interactable; //is currently able to be interacted with
     float Timer;
+
+    Vector3Int tempPos;
 
     [SerializeField] bool oneTime; //if true, then destroys itself on pickup
     [SerializeField] string item; //if it has an item attached to it, this is where the name of it is stored
@@ -68,12 +71,9 @@ public class TileInteractCheck : MonoBehaviour
         
         if (coll.CompareTag("Player"))
         {
-            Debug.Log("Overlap");
             Vector3Int gridpos = cropMap.WorldToCell(player.transform.position);
 
             TileBase tile = cropMap.GetTile(gridpos);
-
-            Debug.Log(tile);
 
             if (tile != null)
             {
@@ -83,7 +83,10 @@ public class TileInteractCheck : MonoBehaviour
                 //Debug.Log(state);
 
                 canInteract = state;
-                Debug.Log("Overlap Successful");
+                tempPos = gridpos;
+
+                item = tileDict[tile].crops;
+                value = tileDict[tile].value;
             }
             else
             {
@@ -104,7 +107,8 @@ public class TileInteractCheck : MonoBehaviour
 
     void DestroySelf()
     {
-        Destroy(gameObject);
+        //tilemap.SetTile(pos, BlankTile.tiles[0]);
+        cropMap.SetTile(tempPos, emptyPlot.tiles[0]);
     }
 
     IEnumerator DeleteSelf()

@@ -12,8 +12,8 @@ public class InteractionState : BlankState
 
     public override void exitState(PlayerManager player)
     {
-        Debug.Log(player.dict.GetItem("Pumpkin"));
-        Debug.Log(player.dict.GetItem("Candle"));
+        Debug.Log("Pumpkins= " + player.dict.GetItem("Pumpkin"));
+        Debug.Log("Candles= " + player.dict.GetItem("Candle"));
     }
 
     public override void Move(PlayerManager player)
