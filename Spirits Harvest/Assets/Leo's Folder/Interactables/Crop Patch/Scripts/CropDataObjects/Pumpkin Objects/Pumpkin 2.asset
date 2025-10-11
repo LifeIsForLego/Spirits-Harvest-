@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca71c99f90b3cb146b2675606f7c29de, type: 3}
   m_Name: Pumpkin 2
   m_EditorClassIdentifier: 
-  tiles: []
-  crops: 
+  tiles:
+  - {fileID: 11400000, guid: fc0f0443bc79cf14daf5deb368446c67, type: 2}
+  crops: null
   value: 0
   Interactable: 0
   canPlant: 0
-  growthTimer: 0
+  growthTimer: 2

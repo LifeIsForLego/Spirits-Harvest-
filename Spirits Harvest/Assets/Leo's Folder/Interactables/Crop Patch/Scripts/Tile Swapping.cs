@@ -6,19 +6,19 @@ public class TileSwapping : MonoBehaviour
 {
     [SerializeField] Tilemap cropMap;
 
-    [SerializeField] List<CropData> Data;
+    [SerializeField] List<CropData> Data; //this contains every single scriptable crop object
 
-    Dictionary<TileBase, CropData> tileDict;
+    Dictionary<TileBase, CropData> tileDict; //dictionary to check the tile data
 
-    [SerializeField]CropData Empty;
+    [SerializeField]CropData Empty; //reference to empty, not really needed?
 
-    [SerializeField]List<CropData> PumpkinStages;//stages 0, 1, 2, 3, 4
+    [SerializeField]List<CropData> PumpkinStages;//stages 0, 1, 2, 3, 4 //all stages for pumpkin, make a new dict for a new crop
 
-    List<Vector3Int> pumpkinGridPos = new List<Vector3Int>(); //stores grid pos for use on dictionary
+    List<Vector3Int> pumpkinGridPos = new List<Vector3Int>(); //stores grid pos for use on dictionary //stores gridpos for pumpkin dict so make a new one for a new crop
 
-    public Dictionary<Vector3Int,int> PumpkinDict = new Dictionary<Vector3Int,int>(); //holds info on position and stage of crop tiles (specifically pumpkin)
+    public Dictionary<Vector3Int,int> PumpkinDict = new Dictionary<Vector3Int,int>(); //holds info on position and stage of crop tiles (specifically pumpkin) //new dict for new crop
 
-    public Dictionary<Vector3Int, float> GrowthTimerDict = new Dictionary<Vector3Int, float>();
+    public Dictionary<Vector3Int, float> GrowthTimerDict = new Dictionary<Vector3Int, float>(); //new dict for new crop
 
 
     private void Awake()
@@ -43,6 +43,11 @@ public class TileSwapping : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PumpkinGrowth();
+    }
+
+    void PumpkinGrowth() //duplicate code and change all pumpkin reference to the new crop when adding a new crop
+    {
         for (int i = 0; i < pumpkinGridPos.Count; i++)
         {
             Vector3Int gridPos = pumpkinGridPos[i];
@@ -65,7 +70,7 @@ public class TileSwapping : MonoBehaviour
 
                 GrowthTimerDict[gridPos] = tileDict[tile].growthTimer;
 
-                if (temp >= PumpkinStages.Count-1)
+                if (temp >= PumpkinStages.Count - 1)
                 {
                     RemovePumpkin(gridPos);
                     cropMap.SetTile(gridPos, PumpkinStages[temp].tiles[0]);
@@ -84,7 +89,7 @@ public class TileSwapping : MonoBehaviour
         }
     }
 
-    public void AddPumpkin(Vector3Int gridPos)
+    public void AddPumpkin(Vector3Int gridPos) //duplicate code and change all pumpkin reference to the new crop when adding a new crop
     {
         if (PumpkinDict.ContainsKey(gridPos))
         {
@@ -102,14 +107,14 @@ public class TileSwapping : MonoBehaviour
         }
     }
 
-    public void RemovePumpkin(Vector3Int gridPos)
+    public void RemovePumpkin(Vector3Int gridPos) //duplicate code and change all pumpkin reference to the new crop when adding a new crop
     {
         PumpkinDict.Remove(gridPos);
         GrowthTimerDict.Remove(gridPos);
         pumpkinGridPos.Remove(gridPos);
     }
 
-    public void nextStage(Vector3Int gridPos)
+    public void nextStage(Vector3Int gridPos) //duplicate code and change all pumpkin reference to the new crop when adding a new crop
     {
         int temp = PumpkinDict[gridPos];
 
