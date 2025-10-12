@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +6,22 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 5f;
+    public Transform startPoint;
 
     Transform targetPoint;
-    int waypointIndex;
+    Transform currentPoint;
 
     void Start()
     {
-        targetPoint = Waypoints.points[0];
+        currentPoint = startPoint;
+        targetPoint = currentPoint.transform;
     }
 
     void Update()
     {
+        if (targetPoint == null)
+            return;
+
         Vector3 dir = targetPoint.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime);
 
@@ -27,7 +33,23 @@ public class Enemy : MonoBehaviour
 
     void GetNextWaypoint()
     {
-        waypointIndex = waypointIndex + 1;
-        targetPoint = Waypoints.points[waypointIndex];
+        Waypoint waypoint = currentPoint.GetComponent<Waypoint>();
+        int rand = UnityEngine.Random.Range(0, waypoint.nextWaypoints.Length);
+
+        if (waypoint.nextWaypoints != null && waypoint.nextWaypoints.Length > 0)
+        {
+            targetPoint = waypoint.nextWaypoints[rand];
+        }
+
+        else if(waypoint.nextWaypoints == null || waypoint.nextWaypoints.Length == 0)
+        {    
+            this.gameObject.transform.position = startPoint.position;
+            currentPoint = startPoint;
+            targetPoint = currentPoint.transform;
+            return;
+        }
+
+        currentPoint = waypoint.nextWaypoints[rand].transform;
+        targetPoint = currentPoint;
     }
 }
