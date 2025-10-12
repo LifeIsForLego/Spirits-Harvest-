@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Draw : MonoBehaviour
@@ -8,6 +9,8 @@ public class Draw : MonoBehaviour
     public int totalYpixels = 512;
     public int brushSize = 4;
     public Color brushColour;
+
+    public bool userInterpolation = true;
 
     public Transform topLeftCorner;
     public Transform bottomRightCorner;
@@ -21,12 +24,16 @@ public class Draw : MonoBehaviour
 
     int xPixel = 0, yPixel = 0;
     float xMult, yMult;
+
+    bool pressedLastFrame = false;
+    int lastX = 0;
+    int lastY = 0;
     private void Start()
     {
         colourMap = new Color[totalXpixels * totalYpixels];
         generatedTexture = new Texture2D(totalYpixels, totalXpixels, TextureFormat.RGBA32, false);
         generatedTexture.filterMode = FilterMode.Point;
-        material.SetTexture("_BaseMap", generatedTexture);
+        material.SetTexture("_MainTex", generatedTexture);
 
         ResetColour();
 
@@ -39,7 +46,10 @@ public class Draw : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             CalculatePixel();
-            
+        }
+        else
+        {
+            pressedLastFrame = false;
         }
     }
     void CalculatePixel()
@@ -54,11 +64,30 @@ public class Draw : MonoBehaviour
 
             ChangePixelsAroundPoint();
         }
+        else
+        {
+            pressedLastFrame = false;
+        }
     }
 
     void ChangePixelsAroundPoint()
     {
-        DrawBrush(xPixel, yPixel);
+        if (userInterpolation && pressedLastFrame && (lastX != xPixel || lastY != yPixel))
+        {
+            int dist = (int)Mathf.Sqrt((xPixel - lastX) * (xPixel - lastX) + (yPixel - lastY) * (yPixel - lastY));
+            for (int i = 1; i <= dist; i++)
+            {
+                DrawBrush((i * xPixel + (dist - i) * lastX) / dist, (i * yPixel + (dist - i) * lastY) / dist);
+            }
+        }
+        else
+        {
+            DrawBrush(xPixel, yPixel);
+        }
+            
+        pressedLastFrame = true;
+        lastX = xPixel;
+        lastY = yPixel;
         SetTexture();
     }
 
@@ -66,10 +95,17 @@ public class Draw : MonoBehaviour
     {
         int i = xPix - brushSize + 1, j = yPix - brushSize + 1, maxi = xPix + brushSize - 1, maxj = yPix + brushSize - 1;
         
-        if (i < 0) i = 0;
-        if (j < 0) j = 0;
-        if (maxi >= totalXpixels) maxi = totalXpixels - 1;
-        if (maxj >= totalYpixels) maxj = totalYpixels - 1;
+        if (i < 0) 
+            i = 0;
+
+        if (j < 0)
+            j = 0;
+
+        if (maxi >= totalXpixels) 
+            maxi = totalXpixels - 1;
+
+        if (maxj >= totalYpixels) 
+            maxj = totalYpixels - 1;
 
         for (int x = i; x <= maxi; x++)
         {
@@ -95,7 +131,8 @@ public class Draw : MonoBehaviour
         for(int i = 0; i < colourMap.Length; i++)
         {
             colourMap[i] = Color.white;
-            SetTexture();
-        }   
+        }
+
+        SetTexture();
     }
 }
