@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class WitchBroom : MonoBehaviour
 {
     
-    private float broomSpeed = 1.0f;
+    //private float broomSpeed = 1.0f;
 
     private float broomDamage = 1.0f;
 

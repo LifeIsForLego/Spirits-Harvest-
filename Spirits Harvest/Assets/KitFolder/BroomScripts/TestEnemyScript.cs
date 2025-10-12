@@ -36,7 +36,7 @@ public class TestEnemyScript : MonoBehaviour
     public void EnemyMove()
     {
         float speed = 2.0f;
-        bool moving = true;
+        //bool moving = true;
         transform.Translate(Vector3.left * speed );
 
     }
