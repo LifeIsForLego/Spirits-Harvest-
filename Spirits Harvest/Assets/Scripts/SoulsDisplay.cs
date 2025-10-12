@@ -1,7 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
-public class CoinsDisplay : MonoBehaviour
+public class SoulsDisplay : MonoBehaviour
 {
     private Text text;
 
@@ -14,7 +16,7 @@ public class CoinsDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        string[] temp = text.text.Split('£');
-        text.text = temp[0] + "£" + CoinsManager.coinAmount;
+        string[] temp = text.text.Split('$');
+        text.text = temp[0] + "$" + SoulsManager.soulAmount;
     }
 }
