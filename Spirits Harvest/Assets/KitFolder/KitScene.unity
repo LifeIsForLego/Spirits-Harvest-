@@ -576,8 +576,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7295066518416521542, guid: 56b1a50f530b4a84ab2a9f08dbe52b00, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7116610459116748422}
   m_SourcePrefab: {fileID: 100100000, guid: 56b1a50f530b4a84ab2a9f08dbe52b00, type: 3}
+--- !u!1 &6546121507613553027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7295066518416521542, guid: 56b1a50f530b4a84ab2a9f08dbe52b00, type: 3}
+  m_PrefabInstance: {fileID: 798716658304976783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7116610459116748422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546121507613553027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a039400f6567994d81c95baebde7e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseHealth: 100
+  enemyDamage: 10
+  healHouse: 10
 --- !u!1001 &8175311954803353301
 PrefabInstance:
   m_ObjectHideFlags: 0
