@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        startPoint = GameObject.FindGameObjectWithTag("EnemyStartPoint").transform;
         currentPoint = startPoint;
         targetPoint = currentPoint.transform;
     }
@@ -42,10 +43,8 @@ public class Enemy : MonoBehaviour
         }
 
         else if(waypoint.nextWaypoints == null || waypoint.nextWaypoints.Length == 0)
-        {    
-            this.gameObject.transform.position = startPoint.position;
-            currentPoint = startPoint;
-            targetPoint = currentPoint.transform;
+        {
+            Destroy(this.gameObject);
             return;
         }
 
