@@ -60,7 +60,7 @@ public class TileInteractCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canInteract && inputs.InteractInput)
+        if (canInteract && inputs.InteractInput && manager.canHarvest)
         {
             manager.InteractionStart(item, value); //for the love of god put "null" and 0 if you want them blank
             if (oneTime)
@@ -69,7 +69,7 @@ public class TileInteractCheck : MonoBehaviour
                 StartCoroutine(DeleteSelf());
             }
         }
-        else if(canPlant && inputs.InteractInput)
+        else if(canPlant && inputs.InteractInput && manager.canPlant)
         {
             manager.InteractionStart("null", 0);
             Vector3Int gridpos = cropMap.WorldToCell(player.transform.position);
