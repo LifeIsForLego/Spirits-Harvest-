@@ -53,8 +53,13 @@ public class BroomHit : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             // Will trigger the TakeDamage script
+            //
             //collision.GetComponent<TestEnemyScript>().TakeDamage(broomDamage, broomKnockback);
+            
             Debug.Log("Enemy hit");
+
+            //add in damage code on enemy
+            //add in knockback effect on enemy
         }
 
 
