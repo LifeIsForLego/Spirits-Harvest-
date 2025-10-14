@@ -12,7 +12,7 @@ public abstract class BlankState
 
     public abstract void Move(PlayerManager player);
 
-    public abstract void useTools(PlayerManager player);
+    public abstract void Tool(PlayerManager player);
 
     public abstract void Interact(PlayerManager player);
 

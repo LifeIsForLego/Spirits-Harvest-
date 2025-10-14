@@ -132,6 +132,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "UseTool",
+                    "type": "Button",
+                    "id": "e4c89522-831b-4e4d-9696-b77fb6c74b52",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -165,6 +174,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Tool3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03e38a3c-506e-4415-9411-cf44b0a2a5ee",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseTool",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

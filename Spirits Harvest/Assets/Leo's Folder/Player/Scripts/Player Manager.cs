@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     public IdleState idleState = new IdleState();
     public MoveState moveState = new MoveState();
     public InteractionState interactionState = new InteractionState();
+    public ToolState toolState = new ToolState();
 
     BasicTool currentTool;
     BasicTool Tool1;
@@ -34,6 +35,9 @@ public class PlayerManager : MonoBehaviour
 
     string tempItemName;
     int tempItemValue;
+
+    bool usingTool;
+    float toolTimer;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -144,6 +148,24 @@ public class PlayerManager : MonoBehaviour
 
     public void ToolInUse(float useDuration)
     {
-        //
+        usingTool = true;
+        toolTimer = useDuration;
+    }
+
+    public bool getUsingTool()
+    {
+        return usingTool;
+    }
+
+    public void toolTick()
+    {
+        if(toolTimer<=0)
+        {
+            usingTool = false;
+        }
+        else
+        {
+            toolTimer -= Time.deltaTime;
+        }
     }
 }

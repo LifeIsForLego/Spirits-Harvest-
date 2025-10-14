@@ -21,7 +21,7 @@ public class InteractionState : BlankState
 
     }
 
-    public override void useTools(PlayerManager player)
+    public override void Tool(PlayerManager player)
     {
 
     }

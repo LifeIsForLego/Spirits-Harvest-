@@ -23,18 +23,22 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] string tool2 = "Tool2";
     [SerializeField] string tool3 = "Tool3";
 
+    [SerializeField] string use = "UseTool";
+
 
     InputAction moveAction;
     InputAction interactAction;
     InputAction tool1Action;
     InputAction tool2Action;
     InputAction tool3Action;
+    InputAction useAction;
 
     public Vector2 MoveInput;
     public bool InteractInput;
     public bool tool1Input;
     public bool tool2Input;
     public bool tool3Input;
+    public bool useInput;
 
 
     string facing;
@@ -48,6 +52,7 @@ public class PlayerInputs : MonoBehaviour
         tool1Action = playerinputs.FindActionMap(ToolMapName).FindAction(tool1);
         tool2Action = playerinputs.FindActionMap(ToolMapName).FindAction(tool2);
         tool3Action = playerinputs. FindActionMap(ToolMapName).FindAction(tool3);
+        useAction = playerinputs.FindActionMap(ToolMapName).FindAction(use);
 
         RegisterInputs();
     }
@@ -68,6 +73,9 @@ public class PlayerInputs : MonoBehaviour
 
         tool3Action.performed += context => tool3Input = true;
         tool3Action.canceled += context => tool3Input = false;
+
+        useAction.performed += context => useInput = true;
+        useAction.canceled += context => useInput = false;
     }
 
     private void OnEnable()
@@ -77,6 +85,7 @@ public class PlayerInputs : MonoBehaviour
         tool1Action.Enable();
         tool2Action.Enable();
         tool3Action.Enable();
+        useAction.Enable();
     }
     private void OnDisable()
     {
@@ -85,6 +94,7 @@ public class PlayerInputs : MonoBehaviour
         tool1Action.Disable();
         tool2Action.Disable();
         tool3Action.Disable();
+        useAction.Disable();
     }
 
 

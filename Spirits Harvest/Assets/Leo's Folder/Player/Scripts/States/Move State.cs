@@ -21,7 +21,7 @@ public class MoveState : BlankState
         }
     }
 
-    public override void useTools(PlayerManager player)
+    public override void Tool(PlayerManager player)
     {
 
     }
@@ -50,6 +50,10 @@ public class MoveState : BlankState
             if (player.interacting)
             {
                 player.ChangeState(player.interactionState);
+            }
+            else if (player.getUsingTool())
+            {
+                player.ChangeState(player.toolState);
             }
             else if (!player.inputs.Moving())
             {

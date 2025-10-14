@@ -1,63 +1,61 @@
 using UnityEngine;
 
-public class IdleState : BlankState
+public class ToolState : BlankState
 {
 
     public override void enterState(PlayerManager player)
     {
-        //Debug.Log("IdleState");
+        //Debug.Log("ToolState");
+
+        player.move.noMove();
     }
 
     public override void exitState(PlayerManager player)
     {
-
+        //Debug.Log("Exit");
     }
 
     public override void Move(PlayerManager player)
     {
-        if(player != null)
-        {
-            player.move.Move();
-        }
+       
     }
 
     public override void Tool(PlayerManager player)
     {
-        
+        player.toolTick();
     }
 
     public override void Interact(PlayerManager player)
     {
-        
+
     }
 
     public override void Carving(PlayerManager player)
     {
-        
+
     }
 
     public override void updateState(PlayerManager player)
     {
-        Move(player);
+        Tool(player);
 
         handleState(player);
     }
 
     public override void handleState(PlayerManager player)
     {
-        if(player!=null)
+        if (player != null)
         {
-            if(player.interacting)
+            if (!player.getUsingTool())
             {
-                player.ChangeState(player.interactionState);
-            }
-            else if(player.getUsingTool())
-            {
-                player.ChangeState(player.toolState);
-            }
-            else if(player.inputs.Moving())
-            {
-                player.ChangeState(player.moveState);
+                if (player.inputs.Moving())
+                {
+                    player.ChangeState(player.moveState);
+                }
+                else
+                {
+                    player.ChangeState(player.idleState);
+                }
             }
         }
     }

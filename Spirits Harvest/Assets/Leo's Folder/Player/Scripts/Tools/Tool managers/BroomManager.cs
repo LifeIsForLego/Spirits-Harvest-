@@ -45,8 +45,9 @@ public class BroomManager : MonoBehaviour
         if(toolEnabled)
         {
             
-            if (inputs.InteractInput && OffCooldown)
+            if (inputs.useInput && OffCooldown)
             {
+                manager.ToolInUse(UseDuration);
                 StartTool();
             }
 
