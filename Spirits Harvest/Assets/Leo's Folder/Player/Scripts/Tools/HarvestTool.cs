@@ -9,12 +9,17 @@ public class HarvestTool : BasicTool
 
     public override void EquipTool(PlayerManager player)
     {
-        Debug.Log("equiped the Harvester");
+        Debug.Log("equipped the Harvester");
         player.canHarvest = true;
     }
 
     public override void UnequipTool(PlayerManager player)
     {
         player.canHarvest = false;
+    }
+
+    public override void ToolEffect(PlayerManager player)
+    {
+        
     }
 }

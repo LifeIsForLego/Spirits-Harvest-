@@ -1,22 +1,21 @@
 using UnityEngine;
 
-public class PumpkinSeed : BasicTool
+public class BroomTool : BasicTool
 {
-    public PumpkinSeed()
+    public BroomTool()
     {
-        toolName = "PumpkinSeed";
+        toolName = "Broom";
     }
 
     public override void EquipTool(PlayerManager player)
     {
-        Debug.Log("equipped the PumpkinSeed");
-        player.canPlant = true;
-        player.SeedName = toolName;
+        Debug.Log("equipped the Broom");
+        player.broom.EnableTool();
     }
 
     public override void UnequipTool(PlayerManager player)
     {
-        player.canPlant = false;
+        player.broom.DisableTool();
     }
 
     public override void ToolEffect(PlayerManager player)

@@ -9,5 +9,5 @@ public abstract class BasicTool
 
     public abstract void UnequipTool(PlayerManager player);
 
-
+    public abstract void ToolEffect(PlayerManager player);
 }

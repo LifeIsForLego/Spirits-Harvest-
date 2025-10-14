@@ -8,6 +8,9 @@ public class PlayerManager : MonoBehaviour
     public PlayerMovement move;
     public PlayerDictionary dict;
 
+    //Tool Managers:
+    public BroomManager broom;
+
     BlankState currentState;
     public IdleState idleState = new IdleState();
     public MoveState moveState = new MoveState();
@@ -19,6 +22,7 @@ public class PlayerManager : MonoBehaviour
     BasicTool Tool3;
     public HarvestTool harvestTool = new HarvestTool();
     public PumpkinSeed pumpkinSeed = new PumpkinSeed();
+    public BroomTool broomTool = new BroomTool();
 
     public bool interacting;
     public float interactTick;
@@ -31,6 +35,7 @@ public class PlayerManager : MonoBehaviour
     string tempItemName;
     int tempItemValue;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,11 +44,14 @@ public class PlayerManager : MonoBehaviour
         move = player.GetComponent<PlayerMovement>();
         dict = player.GetComponent<PlayerDictionary>();
 
+        broom = player.GetComponent<BroomManager>();
+
         currentState = idleState;
         currentState.enterState(this);
 
         Tool1 = harvestTool;
         Tool2 = pumpkinSeed;
+        Tool3 = broomTool;
         currentTool = Tool1;
 
         interacting = false;
@@ -92,11 +100,12 @@ public class PlayerManager : MonoBehaviour
         {
             SwapTool(Tool2);
         }
-        //else if (inputs.tool3Input)
-        //{
-        //    SwapTool(Tool3);
-        //}
+        else if (inputs.tool3Input)
+        {
+            SwapTool(Tool3);
+        }
     }
+
 
     public void InteractionStart(string itemName, int itemValue)
     {
@@ -130,5 +139,11 @@ public class PlayerManager : MonoBehaviour
     {
         tempItemName="null";
         tempItemValue=0;
+    }
+
+
+    public void ToolInUse(float useDuration)
+    {
+        //
     }
 }
