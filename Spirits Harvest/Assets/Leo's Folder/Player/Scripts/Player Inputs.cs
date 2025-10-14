@@ -12,15 +12,29 @@ public class PlayerInputs : MonoBehaviour
 
     [SerializeField] string InteractMapName = "PlayerInteractions";
 
+    [SerializeField] string ToolMapName = "PlayerTools";
+
+
     [SerializeField] string move = "Move";
 
     [SerializeField] string interact = "Interact";
 
+    [SerializeField] string tool1 = "Tool1";
+    [SerializeField] string tool2 = "Tool2";
+    [SerializeField] string tool3 = "Tool3";
+
+
     InputAction moveAction;
     InputAction interactAction;
+    InputAction tool1Action;
+    InputAction tool2Action;
+    InputAction tool3Action;
 
     public Vector2 MoveInput;
     public bool InteractInput;
+    public bool tool1Input;
+    public bool tool2Input;
+    public bool tool3Input;
 
 
     string facing;
@@ -31,6 +45,9 @@ public class PlayerInputs : MonoBehaviour
 
         moveAction = playerinputs.FindActionMap(MovementMapName).FindAction(move);
         interactAction = playerinputs.FindActionMap(InteractMapName).FindAction(interact);
+        tool1Action = playerinputs.FindActionMap(ToolMapName).FindAction(tool1);
+        tool2Action = playerinputs.FindActionMap(ToolMapName).FindAction(tool2);
+        tool3Action = playerinputs. FindActionMap(ToolMapName).FindAction(tool3);
 
         RegisterInputs();
     }
@@ -42,17 +59,32 @@ public class PlayerInputs : MonoBehaviour
 
         interactAction.performed += context => InteractInput = true;
         interactAction.canceled += context => InteractInput = false;
+
+        tool1Action.performed += context => tool1Input = true;
+        tool1Action.canceled += context => tool1Input = false;
+
+        tool2Action.performed += context => tool2Input = true;
+        tool2Action.canceled += context => tool2Input = false;
+
+        tool3Action.performed += context => tool3Input = true;
+        tool3Action.canceled += context => tool3Input = false;
     }
 
     private void OnEnable()
     {
         moveAction.Enable();
         interactAction.Enable();
+        tool1Action.Enable();
+        tool2Action.Enable();
+        tool3Action.Enable();
     }
     private void OnDisable()
     {
         moveAction.Disable();
         interactAction.Disable();
+        tool1Action.Disable();
+        tool2Action.Disable();
+        tool3Action.Disable();
     }
 
 

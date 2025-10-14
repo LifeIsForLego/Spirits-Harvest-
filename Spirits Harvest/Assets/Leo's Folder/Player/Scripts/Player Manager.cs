@@ -13,9 +13,20 @@ public class PlayerManager : MonoBehaviour
     public MoveState moveState = new MoveState();
     public InteractionState interactionState = new InteractionState();
 
+    BasicTool currentTool;
+    BasicTool Tool1;
+    BasicTool Tool2;
+    BasicTool Tool3;
+    public HarvestTool harvestTool = new HarvestTool();
+    public PumpkinSeed pumpkinSeed = new PumpkinSeed();
+
     public bool interacting;
     public float interactTick;
     public float interactTimer;
+
+    public bool canHarvest;
+    public bool canPlant;
+    public string SeedName;
 
     string tempItemName;
     int tempItemValue;
@@ -31,9 +42,20 @@ public class PlayerManager : MonoBehaviour
         currentState = idleState;
         currentState.enterState(this);
 
+        Tool1 = harvestTool;
+        Tool2 = pumpkinSeed;
+        currentTool = Tool1;
+
         interacting = false;
         interactTick = 0.25f;
         interactTimer = 0;
+
+        canHarvest = false;
+        canPlant = false;
+        SeedName = "null";
+
+        Debug.Log(currentTool);
+        currentTool.EquipTool(this);
 
         tempItemName = "null";
         tempItemValue = 0;
@@ -43,6 +65,8 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         currentState.updateState(this);
+
+        HandleTools();
     }
 
     public void ChangeState(BlankState state)
@@ -50,6 +74,28 @@ public class PlayerManager : MonoBehaviour
         currentState.exitState(this);
         currentState = state;
         currentState.enterState(this);
+    }
+    public void SwapTool(BasicTool tool)
+    {
+        currentTool.UnequipTool(this);
+        currentTool = tool;
+        currentTool.EquipTool(this);
+    }
+
+    void HandleTools()
+    {
+        if(inputs.tool1Input)
+        {
+            SwapTool(Tool1);
+        }
+        else if(inputs.tool2Input)
+        {
+            SwapTool(Tool2);
+        }
+        //else if (inputs.tool3Input)
+        //{
+        //    SwapTool(Tool3);
+        //}
     }
 
     public void InteractionStart(string itemName, int itemValue)
