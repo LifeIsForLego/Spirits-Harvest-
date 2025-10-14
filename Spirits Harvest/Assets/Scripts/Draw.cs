@@ -1,9 +1,13 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Draw : MonoBehaviour
+public class Draw : MonoBehaviour 
 {
-    
+
+
+    public Slider drawSlider;
+
     public Camera camera;
     public int totalXpixels = 1024;
     public int totalYpixels = 512;
@@ -35,6 +39,8 @@ public class Draw : MonoBehaviour
         generatedTexture.filterMode = FilterMode.Point;
         material.SetTexture("_MainTex", generatedTexture);
 
+        drawSlider.maxValue = 1000; drawSlider.minValue = 0; drawSlider.value = 1000;
+
         ResetColour();
 
         xMult = totalXpixels / (bottomRightCorner.localPosition.x - topLeftCorner.localPosition.x);
@@ -46,6 +52,7 @@ public class Draw : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             CalculatePixel();
+            drawSlider.value = (int)(drawSlider.value) - 0.1f;
         }
         else
         {
