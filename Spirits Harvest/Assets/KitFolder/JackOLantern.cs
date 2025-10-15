@@ -32,4 +32,9 @@ public class JackOLantern : MonoBehaviour
         lanternDamage -= damage;
     }
 
+    public void detectNearestEnemy()
+    {
+
+    }
+
 }
