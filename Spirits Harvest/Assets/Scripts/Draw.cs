@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,8 @@ public class Draw : MonoBehaviour
 
     public Slider drawSlider;
     public float sliderReductionRate = 0.1f;
+    public bool finishedButtonPressed = false;
+    public Button finishedButton;
 
     public Camera camera;
     public int totalXpixels = 1024;
@@ -38,8 +41,10 @@ public class Draw : MonoBehaviour
         colourMap = new Color[totalXpixels * totalYpixels];
         generatedTexture = new Texture2D(totalYpixels, totalXpixels, TextureFormat.RGBA32, false);
         generatedTexture.filterMode = FilterMode.Point;
-        material.SetTexture("_MainTex", generatedTexture);
+        Button btn = finishedButton.GetComponent<Button>();
 
+        material.SetTexture("_MainTex", generatedTexture);
+        btn.onClick.AddListener(() => { finishedButtonPressed = true; });
         drawSlider.maxValue = 1000; drawSlider.minValue = 0; drawSlider.value = 1000;
 
         ResetColour();
@@ -52,12 +57,17 @@ public class Draw : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (drawSlider.value > 10)
+            if (drawSlider.value > 10 && finishedButtonPressed == false)
             {
                // drawSlider.value = (int)(drawSlider.value) - 0.1f;
                 CalculatePixel();
                
-
+             
+            }
+            else if (drawSlider.value < 10 || finishedButtonPressed == true)
+            {
+               Debug.Log("Finished Drawing");
+                
             }
 
             
