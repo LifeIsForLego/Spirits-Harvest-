@@ -37,19 +37,23 @@ public class JackOLantern : MonoBehaviour
 
     public void lanternDoDamage()
     { 
-        if (Vector3.Distance(transform.position, nearestPoint.position) == 0 )
-        {
 
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            lanternDoDamage();
         }
     }
-    
-    
+
     //This doesnt work
     //public void detectNearestEnemy()
     //{
     //    if (nearestPoint)
-     //   {
-     //       Debug.Log("Enemy Detected");
-      //  }
+    //   {
+    //       Debug.Log("Enemy Detected");
+    //  }
 
 }
