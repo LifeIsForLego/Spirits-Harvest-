@@ -26,7 +26,7 @@ public class JackOLantern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        detectNearestEnemy();
     }
 
     public void lanternTakeDamage(float damage)
@@ -34,9 +34,16 @@ public class JackOLantern : MonoBehaviour
         lanternDamage -= damage;
     }
 
+    public void lanternDoDamage()
+    { 
+    }
+
     public void detectNearestEnemy()
     {
-
+        if (nearestPoint != null)
+        {
+            Debug.Log("Enemy Detected");
+        }
     }
 
 }
