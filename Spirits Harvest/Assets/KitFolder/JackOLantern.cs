@@ -14,6 +14,7 @@ public class JackOLantern : MonoBehaviour
 
     [SerializeField] public float lanternHealth = 10.0f;
     [SerializeField] public float lanternDamage = 10.0f;
+    [SerializeField] public float lanternCoolDown = 1.0f;
 
     [SerializeField] protected Transform nearestPoint;
    
@@ -26,7 +27,7 @@ public class JackOLantern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        detectNearestEnemy();
+        //detectNearestEnemy();
     }
 
     public void lanternTakeDamage(float damage)
@@ -36,14 +37,19 @@ public class JackOLantern : MonoBehaviour
 
     public void lanternDoDamage()
     { 
-    }
-
-    public void detectNearestEnemy()
-    {
-        if (nearestPoint != null)
+        if (Vector3.Distance(transform.position, nearestPoint.position) == 0 )
         {
-            Debug.Log("Enemy Detected");
+
         }
     }
+    
+    
+    //This doesnt work
+    //public void detectNearestEnemy()
+    //{
+    //    if (nearestPoint)
+     //   {
+     //       Debug.Log("Enemy Detected");
+      //  }
 
 }
