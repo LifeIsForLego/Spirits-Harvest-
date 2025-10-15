@@ -191,7 +191,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9066854528511219557, guid: 83a8a0ed64e991640aa4a544903fd966, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1186914749}
   m_SourcePrefab: {fileID: 100100000, guid: 83a8a0ed64e991640aa4a544903fd966, type: 3}
 --- !u!4 &41184170 stripped
 Transform:
@@ -410,7 +413,7 @@ MonoBehaviour:
   lanternHealth: 10
   lanternDamage: 10
   lanternCoolDown: 1
-  nearestPoint: {fileID: 59893777}
+  nearestPoint: {fileID: 1088997548}
 --- !u!1001 &531219207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -419,6 +422,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2912071739083783899, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
       propertyPath: m_Name
       value: Jack O Lantern
@@ -487,6 +502,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2912071739083783899, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
       propertyPath: m_Name
       value: Jack O Lantern (3)
@@ -572,7 +599,7 @@ MonoBehaviour:
   lanternHealth: 10
   lanternDamage: 10
   lanternCoolDown: 1
-  nearestPoint: {fileID: 667394524}
+  nearestPoint: {fileID: 1081029547}
 --- !u!1001 &698595598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -877,6 +904,57 @@ PrefabInstance:
       addedObject: {fileID: 1740044229}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7159f5f189441174e9c6ce33199f3733, type: 3}
+--- !u!1 &1186914744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9066854528511219557, guid: 83a8a0ed64e991640aa4a544903fd966, type: 3}
+  m_PrefabInstance: {fileID: 32058471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1186914749
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186914744}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.28, y: 1.28}
+  m_EdgeRadius: 0
 --- !u!4 &1278216021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2597132980513943920, guid: 7159f5f189441174e9c6ce33199f3733, type: 3}
@@ -1096,7 +1174,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
       propertyPath: m_Size.y
-      value: 3.23
+      value: 3.48062
+      objectReference: {fileID: 0}
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.12530994
       objectReference: {fileID: 0}
     - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
       propertyPath: m_IsTrigger
@@ -1302,7 +1384,7 @@ MonoBehaviour:
   lanternHealth: 10
   lanternDamage: 10
   lanternCoolDown: 1
-  nearestPoint: {fileID: 246006533}
+  nearestPoint: {fileID: 1949099584}
 --- !u!4 &1740044229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2597132980513943920, guid: 7159f5f189441174e9c6ce33199f3733, type: 3}
@@ -1515,7 +1597,7 @@ MonoBehaviour:
   lanternHealth: 10
   lanternDamage: 10
   lanternCoolDown: 1
-  nearestPoint: {fileID: 1278216021}
+  nearestPoint: {fileID: 308356711}
 --- !u!1 &2046798203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,6 +1698,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 397020967918291449, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2912071739083783899, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
       propertyPath: m_Name
       value: Jack O Lantern (2)
@@ -1676,7 +1770,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2036324118}
   m_SourcePrefab: {fileID: 100100000, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
---- !u!1001 &282100714872462200
+--- !u!1001 &9102649651950085483
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1684,55 +1778,63 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: -6161481760197259060, guid: a09332acd38fabb4297aba4659ace198, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6161481760197259060, guid: a09332acd38fabb4297aba4659ace198, type: 3}
+      propertyPath: m_SleepingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539758758236032528, guid: a09332acd38fabb4297aba4659ace198, type: 3}
+      propertyPath: m_Name
+      value: Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.43
+      value: 10.95
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.07
+      value: 4.1
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5295903559951337206, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+    - target: {fileID: 7169751564118808617, guid: a09332acd38fabb4297aba4659ace198, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7920143547973375137, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
-      propertyPath: m_Name
-      value: Square
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9ebfd1b63f4ebef42b5f2f61372f78b7, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: a09332acd38fabb4297aba4659ace198, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1747,4 +1849,4 @@ SceneRoots:
   - {fileID: 1462509071}
   - {fileID: 698595598}
   - {fileID: 1864246379}
-  - {fileID: 282100714872462200}
+  - {fileID: 9102649651950085483}

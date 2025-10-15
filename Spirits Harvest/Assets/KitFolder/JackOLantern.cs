@@ -44,6 +44,7 @@ public class JackOLantern : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
+            Debug.Log("Enemy Detected");
             lanternDoDamage();
         }
     }
