@@ -14,6 +14,8 @@ public class JackOLantern : MonoBehaviour
 
     [SerializeField] public float lanternHealth = 10.0f;
     [SerializeField] public float lanternDamage = 10.0f;
+
+    [SerializeField] protected Transform nearestPoint;
    
     
     void Start()
