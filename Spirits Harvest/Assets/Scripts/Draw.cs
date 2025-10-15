@@ -25,8 +25,10 @@ public class Draw : MonoBehaviour
     public Transform cursorPoint;
 
     public Material material;
+    public Material finishedMaterial;
 
     public Texture2D generatedTexture;
+   
 
     Color[] colourMap;
 
@@ -40,11 +42,15 @@ public class Draw : MonoBehaviour
     {
         colourMap = new Color[totalXpixels * totalYpixels];
         generatedTexture = new Texture2D(totalYpixels, totalXpixels, TextureFormat.RGBA32, false);
+        
         generatedTexture.filterMode = FilterMode.Point;
         Button btn = finishedButton.GetComponent<Button>();
+        btn.onClick.AddListener(() => { finishedButtonPressed = true; });
+
+        
 
         material.SetTexture("_MainTex", generatedTexture);
-        btn.onClick.AddListener(() => { finishedButtonPressed = true; });
+        
         drawSlider.maxValue = 1000; drawSlider.minValue = 0; drawSlider.value = 1000;
 
         ResetColour();
@@ -67,7 +73,9 @@ public class Draw : MonoBehaviour
             else if (drawSlider.value < 10 || finishedButtonPressed == true)
             {
                Debug.Log("Finished Drawing");
-                
+               finishedMaterial.SetTexture("_MainTex", generatedTexture);
+
+
             }
 
             

@@ -357,6 +357,7 @@ MonoBehaviour:
   bottomRightCorner: {fileID: 869959674}
   cursorPoint: {fileID: 863991879}
   material: {fileID: 2100000, guid: 0249c54cda53e7b43ac38f771ad31bed, type: 2}
+  finishedMaterial: {fileID: 2100000, guid: 19b879e2a32c596498ed9a4047497211, type: 2}
   generatedTexture: {fileID: 0}
 --- !u!4 &271762432
 Transform:
