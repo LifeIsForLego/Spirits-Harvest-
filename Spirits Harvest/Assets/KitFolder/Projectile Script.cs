@@ -1,3 +1,5 @@
+
+using System.Collections;
 using UnityEngine;
 
 public class ProjectileScript : MonoBehaviour
@@ -6,11 +8,15 @@ public class ProjectileScript : MonoBehaviour
 
     //[SerializeField] public GameObject projectile;
     [SerializeField] public Rigidbody2D body;
-    //[SerializeField] public float projectileSpeed = 1.0f;
+    [SerializeField] public float projectileSpeed = 1.0f;
+
+    [SerializeField] public GameObject projectile;
+    [SerializeField] public GameObject pumpkin;
     void Start()
     { 
         body = GetComponent<Rigidbody2D>();
-        Destroy(body, 3);
+        //Destroy(body, 3);
+        StartCoroutine(destroySelf());
     }
 
     // Update is called once per frame
@@ -18,12 +24,24 @@ public class ProjectileScript : MonoBehaviour
     {
     }
 
+    public void SpawnProjectile()
+    {
+        Instantiate(projectile, pumpkin.transform.position, Quaternion.identity);
+    }
 
-    public void projectileAttack(float damage,float direction)
+
+
+    public void FixedUpdate()
     {
         //gameObject.SetActive(true);
-        body.linearVelocity = (transform.up * damage) * direction; 
+        //body.linearVelocity = (transform.position * projectileSpeed);
 
 
-    }    
+    }
+
+    IEnumerator destroySelf()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
+    }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class JackOLantern : MonoBehaviour
@@ -15,6 +16,10 @@ public class JackOLantern : MonoBehaviour
     [SerializeField] public float lanternHealth = 10.0f;
     [SerializeField] public float lanternDamage = 10.0f;
     [SerializeField] public float lanternCoolDown = 1.0f;
+
+    //erializeField] public GameObject areaOfEffect;
+    [SerializeField] public GameObject projectile;
+    [SerializeField] public GameObject pumpkin;
 
     //public Transform projectile;
 
@@ -39,8 +44,12 @@ public class JackOLantern : MonoBehaviour
 
     public void lanternDoDamage()
     {
+        Instantiate(projectile, pumpkin.transform.position, Quaternion.identity);
+        
 
     }
+
+
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -48,15 +57,8 @@ public class JackOLantern : MonoBehaviour
         {
             Debug.Log("Enemy Detected");
             lanternDoDamage();
+
+            //Destroy(gameObject,1);
         }
     }
-
-    //This doesnt work
-    //public void detectNearestEnemy()
-    //{
-    //    if (nearestPoint)
-    //   {
-    //       Debug.Log("Enemy Detected");
-    //  }
-
 }
