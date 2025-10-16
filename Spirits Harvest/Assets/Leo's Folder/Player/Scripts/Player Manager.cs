@@ -7,6 +7,7 @@ public class PlayerManager : MonoBehaviour
     public PlayerInputs inputs;
     public PlayerMovement move;
     public PlayerDictionary dict;
+    public Animator animator;
 
     //Tool Managers:
     public BroomManager broom;
@@ -47,6 +48,7 @@ public class PlayerManager : MonoBehaviour
         inputs = player.GetComponent<PlayerInputs>();
         move = player.GetComponent<PlayerMovement>();
         dict = player.GetComponent<PlayerDictionary>();
+        animator = GetComponent<Animator>();
 
         broom = player.GetComponent<BroomManager>();
 
@@ -71,6 +73,7 @@ public class PlayerManager : MonoBehaviour
 
         tempItemName = "null";
         tempItemValue = 0;
+        
     }
 
     // Update is called once per frame

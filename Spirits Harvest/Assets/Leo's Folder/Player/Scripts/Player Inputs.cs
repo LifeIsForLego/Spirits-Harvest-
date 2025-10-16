@@ -6,6 +6,8 @@ public class PlayerInputs : MonoBehaviour
     private static PlayerInputs instance;
     public static PlayerInputs GetInstance() { return instance; }
 
+    public Animator animator;
+
     [SerializeField] InputActionAsset playerinputs;
 
     [SerializeField] string MovementMapName = "PlayerMovement";
@@ -33,7 +35,7 @@ public class PlayerInputs : MonoBehaviour
     InputAction tool3Action;
     InputAction useAction;
 
-    public Vector2 MoveInput;
+    public Vector2 MoveInput; 
     public bool InteractInput;
     public bool tool1Input;
     public bool tool2Input;
@@ -122,6 +124,10 @@ public class PlayerInputs : MonoBehaviour
         if (MoveInput.x == 0 && MoveInput.y > 0)
         {
             facing = "North";
+            animator.SetBool("Is_North", true);
+            animator.SetBool("Is_South", false);
+            animator.SetBool("Is_East", false);
+            animator.SetBool("Is_West", false);
         }
         //NE y = 1 x = 1
         else if (MoveInput.x > 0 && MoveInput.y > 0)
@@ -132,6 +138,11 @@ public class PlayerInputs : MonoBehaviour
         else if (MoveInput.x > 0 && MoveInput.y == 0)
         {
             facing = "East";
+            animator.SetBool("Is_East", true);
+            animator.SetBool("Is_South", false);
+            animator.SetBool("Is_North", false);
+            animator.SetBool("Is_West", false);
+
         }
         //SE y = -1 x = 1
         else if (MoveInput.x > 0 && MoveInput.y < 0)
@@ -142,6 +153,10 @@ public class PlayerInputs : MonoBehaviour
         else if (MoveInput.x == 0 && MoveInput.y < 0)
         {
             facing = "South";
+            animator.SetBool("Is_South", true);
+            animator.SetBool("Is_North", false);
+            animator.SetBool("Is_East", false);
+            animator.SetBool("Is_West", false);
         }
         //SW y = -1 x = -1
         else if (MoveInput.x < 0 && MoveInput.y < 0)
@@ -152,6 +167,10 @@ public class PlayerInputs : MonoBehaviour
         else if (MoveInput.x < 0 && MoveInput.y == 0)
         {
             facing = "West";
+            animator.SetBool("Is_West", true);
+            animator.SetBool("Is_South", false);
+            animator.SetBool("Is_East", false);
+            animator.SetBool("Is_North", false);
         }
         //NW y = 1 x = -1
         else if (MoveInput.x < 0 && MoveInput.y > 0)

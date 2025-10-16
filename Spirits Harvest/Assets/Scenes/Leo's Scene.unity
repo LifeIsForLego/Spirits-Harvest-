@@ -613,6 +613,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3723938550239647116, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723938550239647116, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.56
+      objectReference: {fileID: 0}
     - target: {fileID: 4959677665192234439, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.241
@@ -657,6 +665,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1572751298032790218, guid: 9d881c551da070a45a3f0a30c0a7eed4, type: 3}
+    - target: {fileID: 6808812180960033388, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403163600218735169, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 7577424}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

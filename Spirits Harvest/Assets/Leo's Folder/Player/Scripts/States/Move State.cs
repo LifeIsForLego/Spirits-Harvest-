@@ -6,6 +6,7 @@ public class MoveState : BlankState
     public override void enterState(PlayerManager player)
     {
         //Debug.Log("MoveState");
+        player.animator.SetBool("Is_Moving", true);
     }
 
     public override void exitState(PlayerManager player)

@@ -6,6 +6,7 @@ public class IdleState : BlankState
     public override void enterState(PlayerManager player)
     {
         //Debug.Log("IdleState");
+        player.animator.SetBool("Is_Moving", false);
     }
 
     public override void exitState(PlayerManager player)
