@@ -17,6 +17,8 @@ public class CarvingState : BlankState
 
     public override void exitState(PlayerManager player)
     {
+        Debug.Log("left CarvingState");
+
         player.playerMode=false;
         player.cams.CarvingOff();
         player.UIc.CarveModeOff();
