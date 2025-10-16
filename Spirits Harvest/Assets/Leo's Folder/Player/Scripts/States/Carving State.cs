@@ -10,10 +10,9 @@ public class CarvingState : BlankState
         player.move.noMove();
 
         player.playerMode = false;
-
         player.cams.CarvingOn();
-
         player.UIc.CarveModeOn();
+        player.draw.ENABLEDON();
     }
 
     public override void exitState(PlayerManager player)
@@ -21,6 +20,7 @@ public class CarvingState : BlankState
         player.playerMode=false;
         player.cams.CarvingOff();
         player.UIc.CarveModeOff();
+        player.draw.ENABLEDOFF();
     }
 
     public override void Move(PlayerManager player)

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Draw : MonoBehaviour 
 {
-
+    bool ENABLED;
 
     public Slider drawSlider;
     public float sliderReductionRate = 0.1f;
@@ -40,6 +40,8 @@ public class Draw : MonoBehaviour
     int lastY = 0;
     private void Start()
     {
+        ENABLED = false;
+
         colourMap = new Color[totalXpixels * totalYpixels];
         generatedTexture = new Texture2D(totalYpixels, totalXpixels, TextureFormat.RGBA32, false);
         
@@ -61,29 +63,32 @@ public class Draw : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (ENABLED)
         {
-            if (drawSlider.value > 10 && finishedButtonPressed == false)
+            if (Input.GetMouseButton(0))
             {
-               // drawSlider.value = (int)(drawSlider.value) - 0.1f;
-                CalculatePixel();
-               
-             
+                if (drawSlider.value > 10 && finishedButtonPressed == false)
+                {
+                    // drawSlider.value = (int)(drawSlider.value) - 0.1f;
+                    CalculatePixel();
+
+
+                }
+                else if (drawSlider.value < 10 || finishedButtonPressed == true)
+                {
+                    Debug.Log("Finished Drawing");
+                    finishedMaterial.SetTexture("_MainTex", generatedTexture);
+
+
+                }
+
+
             }
-            else if (drawSlider.value < 10 || finishedButtonPressed == true)
+            else
             {
-               Debug.Log("Finished Drawing");
-               finishedMaterial.SetTexture("_MainTex", generatedTexture);
-
+                pressedLastFrame = false;
 
             }
-
-            
-        }
-        else
-        {
-            pressedLastFrame = false;
-            
         }
     }
     void CalculatePixel()
@@ -172,5 +177,18 @@ public class Draw : MonoBehaviour
         }
 
         SetTexture();
+    }
+
+    public void ENABLEDON()
+    {
+        ENABLED = true;
+    }
+    public void ENABLEDOFF()
+    {
+        ENABLED = false;
+    }
+    public bool GETENABLED()
+    {
+        return ENABLED;
     }
 }

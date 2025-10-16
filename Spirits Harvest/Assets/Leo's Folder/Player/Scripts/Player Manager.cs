@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
 
     public CameraManager cams;
     public UICarve UIc;
+    public Draw draw;
 
     //Tool Managers:
     public BroomManager broom;

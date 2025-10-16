@@ -1887,6 +1887,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420033}
     - target: {fileID: 6808812180960033388, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
+      propertyPath: draw
+      value: 
+      objectReference: {fileID: 1533098598}
+    - target: {fileID: 6808812180960033388, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
       propertyPath: Camobj
       value: 
       objectReference: {fileID: 519420028}
