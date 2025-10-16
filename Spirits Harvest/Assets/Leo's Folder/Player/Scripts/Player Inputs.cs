@@ -22,6 +22,7 @@ public class PlayerInputs : MonoBehaviour
     [SerializeField] string tool1 = "Tool1";
     [SerializeField] string tool2 = "Tool2";
     [SerializeField] string tool3 = "Tool3";
+    [SerializeField] string tool4 = "Tool4";
 
     [SerializeField] string use = "UseTool";
 
@@ -33,6 +34,7 @@ public class PlayerInputs : MonoBehaviour
     InputAction tool1Action;
     InputAction tool2Action;
     InputAction tool3Action;
+    InputAction tool4Action;
     InputAction useAction;
     InputAction carveAction;
 
@@ -41,6 +43,7 @@ public class PlayerInputs : MonoBehaviour
     public bool tool1Input;
     public bool tool2Input;
     public bool tool3Input;
+    public bool tool4Input;
     public bool useInput;
     public bool carveInput;
 
@@ -56,6 +59,7 @@ public class PlayerInputs : MonoBehaviour
         tool1Action = playerinputs.FindActionMap(ToolMapName).FindAction(tool1);
         tool2Action = playerinputs.FindActionMap(ToolMapName).FindAction(tool2);
         tool3Action = playerinputs. FindActionMap(ToolMapName).FindAction(tool3);
+        tool4Action = playerinputs.FindActionMap(ToolMapName).FindAction(tool4);
         useAction = playerinputs.FindActionMap(ToolMapName).FindAction(use);
         carveAction = playerinputs.FindActionMap(ToolMapName).FindAction(carve);
 
@@ -79,6 +83,9 @@ public class PlayerInputs : MonoBehaviour
         tool3Action.performed += context => tool3Input = true;
         tool3Action.canceled += context => tool3Input = false;
 
+        tool4Action.performed += context => tool4Input = true;
+        tool4Action.canceled += context => tool4Input = false;
+
         useAction.performed += context => useInput = true;
         useAction.canceled += context => useInput = false;
 
@@ -93,6 +100,7 @@ public class PlayerInputs : MonoBehaviour
         tool1Action.Enable();
         tool2Action.Enable();
         tool3Action.Enable();
+        tool4Action.Enable();
         useAction.Enable();
         carveAction.Enable();
     }
@@ -103,6 +111,7 @@ public class PlayerInputs : MonoBehaviour
         tool1Action.Disable();
         tool2Action.Disable();
         tool3Action.Disable();
+        tool4Action.Disable();
         useAction.Disable();
         carveAction.Disable();
     }

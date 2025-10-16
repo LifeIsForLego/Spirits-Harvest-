@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
 
     //Tool Managers:
     public BroomManager broom;
+    public PumpkinLanternManager pumpLantern;
 
     BlankState currentState;
     public IdleState idleState = new IdleState();
@@ -26,9 +27,11 @@ public class PlayerManager : MonoBehaviour
     BasicTool Tool1;
     BasicTool Tool2;
     BasicTool Tool3;
+    BasicTool Tool4;
     public HarvestTool harvestTool = new HarvestTool();
     public PumpkinSeed pumpkinSeed = new PumpkinSeed();
     public BroomTool broomTool = new BroomTool();
+    public PumpkinLanternTool planternTool = new PumpkinLanternTool();
 
     public bool playerMode;
 
@@ -62,6 +65,7 @@ public class PlayerManager : MonoBehaviour
         dict = player.GetComponent<PlayerDictionary>();
 
         broom = player.GetComponent<BroomManager>();
+        pumpLantern = player.GetComponent<PumpkinLanternManager>();
 
         currentState = idleState;
         currentState.enterState(this);
@@ -69,6 +73,7 @@ public class PlayerManager : MonoBehaviour
         Tool1 = harvestTool;
         Tool2 = pumpkinSeed;
         Tool3 = broomTool;
+        Tool4 = planternTool;
         currentTool = Tool1;
 
         interacting = false;
@@ -123,6 +128,10 @@ public class PlayerManager : MonoBehaviour
         else if (inputs.tool3Input)
         {
             SwapTool(Tool3);
+        }
+        else if(inputs.tool4Input)
+        {
+            SwapTool(Tool4);
         }
     }
 
@@ -222,8 +231,6 @@ public class PlayerManager : MonoBehaviour
             dict.RemoveItem("Candle", 1);
             dict.AddItem("PumpkinLantern", 1);
         }
-
-        Debug.Log("PumpkinLantern= " + dict.GetItem("PumpkinLantern"));
     }
     public void placePumpkinLantern()
     {
@@ -233,6 +240,10 @@ public class PlayerManager : MonoBehaviour
         {
             dict.RemoveItem("PumpkinLantern", 1);
             Debug.Log("LanternPlaced");
+        }
+        else
+        {
+            Debug.Log("no Lantern");
         }
     }
 }
