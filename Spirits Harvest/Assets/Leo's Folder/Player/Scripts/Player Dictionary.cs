@@ -21,19 +21,41 @@ public class PlayerDictionary : MonoBehaviour
     {
         if(HeldItems.ContainsKey(item))
         {
-            HeldItems[item] += value;
+            if (item == "Candle")
+            {
+                int temp = HeldItems[item];
+                if (temp + value >= 15)
+                {
+                    HeldItems[item] = 15;
+                }
+            }
+            else
+            {
+                HeldItems[item] += value;
+            }
         }
         else
         {
-            HeldItems[item] = value;
+            if (item == "Candle")
+            {
+                if(value >= 15)
+                {
+                    HeldItems[item] = 15;
+                }
+            }
+            else
+            {
+                HeldItems[item] = value;
+            }
         }
     }
 
     public void ResetHeldItems()
     {
         HeldItems.Clear();
-        AddItem("Pumpkin", 0);
+
         AddItem("Candle", 0);
+        AddItem("Pumpkin", 0);
     }
 
     public void RemoveItem(string item, int value)
