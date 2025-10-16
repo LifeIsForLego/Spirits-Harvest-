@@ -16,8 +16,6 @@ public class JackOLantern : MonoBehaviour
     [SerializeField] public float lanternDamage = 10.0f;
     [SerializeField] public float lanternCoolDown = 1.0f;
 
-    [SerializeField] public GameObject projectile;
-
     //public Transform projectile;
 
     [SerializeField] protected Transform nearestPoint;
@@ -41,7 +39,7 @@ public class JackOLantern : MonoBehaviour
 
     public void lanternDoDamage()
     {
-        //Instantiate(projectile,)
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
