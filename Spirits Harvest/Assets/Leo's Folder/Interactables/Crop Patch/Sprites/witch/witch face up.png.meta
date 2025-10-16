@@ -103,12 +103,12 @@ TextureImporter:
       name: witch face up_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 10
-        width: 61
-        height: 116
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 96a9f64732436e140b5f90c6dabf7865
     internalID: 0
     vertices: []
     indices: 
