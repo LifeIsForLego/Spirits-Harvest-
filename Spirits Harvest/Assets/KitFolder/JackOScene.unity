@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2597132980513943920, guid: 7159f5f189441174e9c6ce33199f3733, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09
+      value: -0.01999998
       objectReference: {fileID: 0}
     - target: {fileID: 2597132980513943920, guid: 7159f5f189441174e9c6ce33199f3733, type: 3}
       propertyPath: m_LocalPosition.z
@@ -413,8 +413,6 @@ MonoBehaviour:
   lanternHealth: 10
   lanternDamage: 10
   lanternCoolDown: 1
-  projectile: {fileID: 643015788}
-  Projectile_: {fileID: 643015788}
   nearestPoint: {fileID: 1088997548}
 --- !u!1001 &531219207
 PrefabInstance:
@@ -576,16 +574,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1670147013}
   m_SourcePrefab: {fileID: 100100000, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
---- !u!1 &643015788 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6539758758236032528, guid: a09332acd38fabb4297aba4659ace198, type: 3}
-  m_PrefabInstance: {fileID: 9102649651950085483}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &643015789 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: -6161481760197259060, guid: a09332acd38fabb4297aba4659ace198, type: 3}
-  m_PrefabInstance: {fileID: 9102649651950085483}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &667394524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2597132980513943920, guid: 7159f5f189441174e9c6ce33199f3733, type: 3}
@@ -611,23 +599,34 @@ MonoBehaviour:
   lanternHealth: 10
   lanternDamage: 10
   lanternCoolDown: 1
-  projectile: {fileID: 643015788}
-  Projectile_: {fileID: 643015788}
   nearestPoint: {fileID: 1081029547}
---- !u!114 &688326451
-MonoBehaviour:
+--- !u!50 &688326447
+Rigidbody2D:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688326442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7df93a7f49d76e54b817c8673e67ec8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 643015789}
-  projectileSpeed: 1
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &698595598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1273,7 +1272,7 @@ PrefabInstance:
       addedObject: {fileID: 688326446}
     - targetCorrespondingSourceObject: {fileID: 2912071739083783899, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 688326451}
+      addedObject: {fileID: 688326447}
   m_SourcePrefab: {fileID: 100100000, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
 --- !u!1001 &1589431531
 PrefabInstance:
@@ -1415,8 +1414,6 @@ MonoBehaviour:
   lanternHealth: 10
   lanternDamage: 10
   lanternCoolDown: 1
-  projectile: {fileID: 643015788}
-  Projectile_: {fileID: 643015788}
   nearestPoint: {fileID: 1949099584}
 --- !u!4 &1740044229 stripped
 Transform:
@@ -1630,8 +1627,6 @@ MonoBehaviour:
   lanternHealth: 10
   lanternDamage: 10
   lanternCoolDown: 1
-  projectile: {fileID: 643015788}
-  Projectile_: {fileID: 643015788}
   nearestPoint: {fileID: 308356711}
 --- !u!1 &2046798203
 GameObject:

@@ -17,7 +17,6 @@ public class JackOLantern : MonoBehaviour
     [SerializeField] public float lanternCoolDown = 1.0f;
 
     [SerializeField] public GameObject projectile;
-    [SerializeField] public GameObject Projectile_;
 
     //public Transform projectile;
 
@@ -42,7 +41,7 @@ public class JackOLantern : MonoBehaviour
 
     public void lanternDoDamage()
     {
-        Instantiate(projectile, Projectile_.transform.position, Projectile_.transform.rotation);
+        //Instantiate(projectile,)
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

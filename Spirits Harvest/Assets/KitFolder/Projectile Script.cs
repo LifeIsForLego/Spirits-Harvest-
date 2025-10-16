@@ -6,7 +6,7 @@ public class ProjectileScript : MonoBehaviour
 
     //[SerializeField] public GameObject projectile;
     [SerializeField] public Rigidbody2D body;
-    [SerializeField] public float projectileSpeed = 1.0f;
+    //[SerializeField] public float projectileSpeed = 1.0f;
     void Start()
     { 
         body = GetComponent<Rigidbody2D>();
@@ -19,9 +19,11 @@ public class ProjectileScript : MonoBehaviour
     }
 
 
-    public void FixedUpdate()
+    public void projectileAttack(float damage,float direction)
     {
-        body.linearVelocity = (transform.up * projectileSpeed);
+        //gameObject.SetActive(true);
+        body.linearVelocity = (transform.up * damage) * direction; 
+
 
     }    
 }
