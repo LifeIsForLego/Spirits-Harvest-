@@ -1,9 +1,17 @@
 using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Draw : MonoBehaviour
+public class Draw : MonoBehaviour 
 {
-    
+
+
+    public Slider drawSlider;
+    public float sliderReductionRate = 0.1f;
+    public bool finishedButtonPressed = false;
+    public Button finishedButton;
+
     public Camera camera;
     public int totalXpixels = 1024;
     public int totalYpixels = 512;
@@ -17,8 +25,10 @@ public class Draw : MonoBehaviour
     public Transform cursorPoint;
 
     public Material material;
+    public Material finishedMaterial;
 
     public Texture2D generatedTexture;
+   
 
     Color[] colourMap;
 
@@ -32,8 +42,16 @@ public class Draw : MonoBehaviour
     {
         colourMap = new Color[totalXpixels * totalYpixels];
         generatedTexture = new Texture2D(totalYpixels, totalXpixels, TextureFormat.RGBA32, false);
+        
         generatedTexture.filterMode = FilterMode.Point;
+        Button btn = finishedButton.GetComponent<Button>();
+        btn.onClick.AddListener(() => { finishedButtonPressed = true; });
+
+        
+
         material.SetTexture("_MainTex", generatedTexture);
+        
+        drawSlider.maxValue = 1000; drawSlider.minValue = 0; drawSlider.value = 1000;
 
         ResetColour();
 
@@ -45,11 +63,27 @@ public class Draw : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            CalculatePixel();
+            if (drawSlider.value > 10 && finishedButtonPressed == false)
+            {
+               // drawSlider.value = (int)(drawSlider.value) - 0.1f;
+                CalculatePixel();
+               
+             
+            }
+            else if (drawSlider.value < 10 || finishedButtonPressed == true)
+            {
+               Debug.Log("Finished Drawing");
+               finishedMaterial.SetTexture("_MainTex", generatedTexture);
+
+
+            }
+
+            
         }
         else
         {
             pressedLastFrame = false;
+            
         }
     }
     void CalculatePixel()
@@ -67,6 +101,7 @@ public class Draw : MonoBehaviour
         else
         {
             pressedLastFrame = false;
+            
         }
     }
 
@@ -78,11 +113,14 @@ public class Draw : MonoBehaviour
             for (int i = 1; i <= dist; i++)
             {
                 DrawBrush((i * xPixel + (dist - i) * lastX) / dist, (i * yPixel + (dist - i) * lastY) / dist);
+                drawSlider.value -= sliderReductionRate;
             }
         }
         else
         {
             DrawBrush(xPixel, yPixel);
+            drawSlider.value -= sliderReductionRate;
+
         }
             
         pressedLastFrame = true;
