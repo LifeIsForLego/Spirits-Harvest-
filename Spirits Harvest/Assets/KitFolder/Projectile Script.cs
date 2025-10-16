@@ -26,7 +26,7 @@ public class ProjectileScript : MonoBehaviour
 
     public void SpawnProjectile()
     {
-        Instantiate(projectile, pumpkin.transform.position, Quaternion.identity);
+        Instantiate(projectile, pumpkin.transform.position , Quaternion.identity);
     }
 
 
