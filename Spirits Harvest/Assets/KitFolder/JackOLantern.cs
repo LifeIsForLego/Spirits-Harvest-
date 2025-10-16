@@ -16,8 +16,8 @@ public class JackOLantern : MonoBehaviour
     [SerializeField] public float lanternDamage = 10.0f;
     [SerializeField] public float lanternCoolDown = 1.0f;
 
-    [SerializeField] public GameObject projectile;
-    [SerializeField] public GameObject Projectile_;
+    //[SerializeField] public GameObject projectile;
+   // [SerializeField] public GameObject Projectile_;
 
     //public Transform projectile;
 
@@ -35,22 +35,22 @@ public class JackOLantern : MonoBehaviour
         //detectNearestEnemy();
     }
 
-    public void lanternTakeDamage(float damage)
-    {
-        lanternDamage -= damage;
-    }
+   // public void lanternTakeDamage(float damage)
+   // {
+   //     lanternDamage -= damage;
+   // }
 
-    public void lanternDoDamage()
-    {
-        Instantiate(projectile, Projectile_.transform.position, Projectile_.transform.rotation);
-    }
+   // public void lanternDoDamage()
+   // {
+   //     Instantiate(projectile, Projectile_.transform.position, Projectile_.transform.rotation);
+   // }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
         {
             Debug.Log("Enemy Detected");
-            lanternDoDamage();
+            //lanternDoDamage();
         }
     }
 
