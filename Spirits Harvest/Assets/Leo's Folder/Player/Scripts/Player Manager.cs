@@ -89,7 +89,10 @@ public class PlayerManager : MonoBehaviour
     {
         currentState.updateState(this);
 
-        HandleTools();
+        if (playerMode)
+        {
+            HandleTools();
+        }
     }
 
     public void ChangeState(BlankState state)

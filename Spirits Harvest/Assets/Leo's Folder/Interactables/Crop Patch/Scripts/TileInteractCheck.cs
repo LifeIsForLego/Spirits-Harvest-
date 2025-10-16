@@ -60,20 +60,23 @@ public class TileInteractCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canInteract && inputs.InteractInput && manager.canHarvest)
+        if (manager.playerMode)
         {
-            manager.InteractionStart(item, value); //for the love of god put "null" and 0 if you want them blank
-            if (oneTime)
+            if (canInteract && inputs.InteractInput && manager.canHarvest)
             {
-                Timer = manager.GetInteractTick();
-                StartCoroutine(DeleteSelf());
+                manager.InteractionStart(item, value); //for the love of god put "null" and 0 if you want them blank
+                if (oneTime)
+                {
+                    Timer = manager.GetInteractTick();
+                    StartCoroutine(DeleteSelf());
+                }
             }
-        }
-        else if(canPlant && inputs.InteractInput && manager.canPlant)
-        {
-            manager.InteractionStart("null", 0);
-            Vector3Int gridpos = cropMap.WorldToCell(player.transform.position);
-            swap.AddPumpkin(gridpos);
+            else if (canPlant && inputs.InteractInput && manager.canPlant)
+            {
+                manager.InteractionStart("null", 0);
+                Vector3Int gridpos = cropMap.WorldToCell(player.transform.position);
+                swap.AddPumpkin(gridpos);
+            }
         }
     }
 
