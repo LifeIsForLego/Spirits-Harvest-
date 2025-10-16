@@ -1878,6 +1878,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6808812180960033388, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
+      propertyPath: UIc
+      value: 
+      objectReference: {fileID: 1724357977}
+    - target: {fileID: 6808812180960033388, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
+      propertyPath: cams
+      value: 
+      objectReference: {fileID: 519420033}
+    - target: {fileID: 6808812180960033388, guid: 6d21e1b6c68447e44b91d85c99f26487, type: 3}
+      propertyPath: Camobj
+      value: 
+      objectReference: {fileID: 519420028}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

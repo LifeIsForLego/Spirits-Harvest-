@@ -8,6 +8,9 @@ public class PlayerManager : MonoBehaviour
     public PlayerMovement move;
     public PlayerDictionary dict;
 
+    public CameraManager cams;
+    public UICarve UIc;
+
     //Tool Managers:
     public BroomManager broom;
 
@@ -16,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     public MoveState moveState = new MoveState();
     public InteractionState interactionState = new InteractionState();
     public ToolState toolState = new ToolState();
+    public CarvingState carvingState = new CarvingState();
 
     BasicTool currentTool;
     BasicTool Tool1;
@@ -24,6 +28,8 @@ public class PlayerManager : MonoBehaviour
     public HarvestTool harvestTool = new HarvestTool();
     public PumpkinSeed pumpkinSeed = new PumpkinSeed();
     public BroomTool broomTool = new BroomTool();
+
+    public bool playerMode;
 
     public bool interacting;
     public float interactTick;
@@ -39,10 +45,14 @@ public class PlayerManager : MonoBehaviour
     bool usingTool;
     float toolTimer;
 
+    bool Carving;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerMode = true;
+
         player = PlayerInputs.GetInstance().gameObject;
         inputs = player.GetComponent<PlayerInputs>();
         move = player.GetComponent<PlayerMovement>();
@@ -167,5 +177,18 @@ public class PlayerManager : MonoBehaviour
         {
             toolTimer -= Time.deltaTime;
         }
+    }
+
+    public void CarvingOn()
+    {
+        Carving = true;
+    }
+    public void CarvingOff()
+    {
+        Carving = false;
+    }
+    public bool GetCarving()
+    {
+        return Carving;
     }
 }

@@ -33,12 +33,17 @@ public class IdleState : BlankState
 
     public override void Carving(PlayerManager player)
     {
-        
+        if(player.inputs.carveInput)
+        {
+            player.CarvingOn();
+        }
     }
 
     public override void updateState(PlayerManager player)
     {
         Move(player);
+
+        Carving(player);
 
         handleState(player);
     }
@@ -47,7 +52,11 @@ public class IdleState : BlankState
     {
         if(player!=null)
         {
-            if(player.interacting)
+            if(player.GetCarving())
+            {
+                player.ChangeState(player.carvingState);
+            }
+            else if(player.interacting)
             {
                 player.ChangeState(player.interactionState);
             }

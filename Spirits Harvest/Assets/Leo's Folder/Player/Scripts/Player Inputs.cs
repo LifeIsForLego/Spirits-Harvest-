@@ -25,6 +25,8 @@ public class PlayerInputs : MonoBehaviour
 
     [SerializeField] string use = "UseTool";
 
+    [SerializeField] string carve = "Carve";
+
 
     InputAction moveAction;
     InputAction interactAction;
@@ -32,6 +34,7 @@ public class PlayerInputs : MonoBehaviour
     InputAction tool2Action;
     InputAction tool3Action;
     InputAction useAction;
+    InputAction carveAction;
 
     public Vector2 MoveInput;
     public bool InteractInput;
@@ -39,6 +42,7 @@ public class PlayerInputs : MonoBehaviour
     public bool tool2Input;
     public bool tool3Input;
     public bool useInput;
+    public bool carveInput;
 
 
     string facing;
@@ -53,6 +57,7 @@ public class PlayerInputs : MonoBehaviour
         tool2Action = playerinputs.FindActionMap(ToolMapName).FindAction(tool2);
         tool3Action = playerinputs. FindActionMap(ToolMapName).FindAction(tool3);
         useAction = playerinputs.FindActionMap(ToolMapName).FindAction(use);
+        carveAction = playerinputs.FindActionMap(ToolMapName).FindAction(carve);
 
         RegisterInputs();
     }
@@ -76,6 +81,9 @@ public class PlayerInputs : MonoBehaviour
 
         useAction.performed += context => useInput = true;
         useAction.canceled += context => useInput = false;
+
+        carveAction.performed += context => carveInput = true;
+        carveAction.canceled += context => carveInput = false;
     }
 
     private void OnEnable()
@@ -86,6 +94,7 @@ public class PlayerInputs : MonoBehaviour
         tool2Action.Enable();
         tool3Action.Enable();
         useAction.Enable();
+        carveAction.Enable();
     }
     private void OnDisable()
     {
@@ -95,6 +104,7 @@ public class PlayerInputs : MonoBehaviour
         tool2Action.Disable();
         tool3Action.Disable();
         useAction.Disable();
+        carveAction.Disable();
     }
 
 
