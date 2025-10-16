@@ -19,7 +19,7 @@ public class CarvingState : BlankState
     {
         Debug.Log("left CarvingState");
 
-        player.playerMode=false;
+        player.playerMode=true;
         player.cams.CarvingOff();
         player.UIc.CarveModeOff();
         player.draw.ENABLEDOFF();
@@ -42,11 +42,16 @@ public class CarvingState : BlankState
 
     public override void Carving(PlayerManager player)
     {
-
+        if(player.draw.finishedButtonPressed)
+        {
+            player.CarvingOff();
+        }
     }
 
     public override void updateState(PlayerManager player)
     {
+        Carving(player);
+
         handleState(player);
     }
 
