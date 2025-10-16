@@ -118,6 +118,67 @@ public class PlayerInputs : MonoBehaviour
         return false;
     }
 
+    //void currentDirection()
+    //{
+    //    //N y = 1 x = 0
+    //    if (MoveInput.x == 0 && MoveInput.y > 0)
+    //    {
+    //        facing = "North";
+    //        animator.SetBool("Is_North", true);
+    //        animator.SetBool("Is_South", false);
+    //        animator.SetBool("Is_East", false);
+    //        animator.SetBool("Is_West", false);
+    //    }
+    //    //NE y = 1 x = 1
+    //    else if (MoveInput.x > 0 && MoveInput.y > 0)
+    //    {
+    //        facing = "NorthEast";
+    //    }
+    //    //E y = 0 x = 1
+    //    else if (MoveInput.x > 0 && MoveInput.y == 0)
+    //    {
+    //        facing = "East";
+    //        animator.SetBool("Is_East", true);
+    //        animator.SetBool("Is_South", false);
+    //        animator.SetBool("Is_North", false);
+    //        animator.SetBool("Is_West", false);
+
+    //    }
+    //    //SE y = -1 x = 1
+    //    else if (MoveInput.x > 0 && MoveInput.y < 0)
+    //    {
+    //        facing = "SouthEast";
+    //    }
+    //    //S y = -1 x = 0
+    //    else if (MoveInput.x == 0 && MoveInput.y < 0)
+    //    {
+    //        facing = "South";
+    //        animator.SetBool("Is_South", true);
+    //        animator.SetBool("Is_North", false);
+    //        animator.SetBool("Is_East", false);
+    //        animator.SetBool("Is_West", false);
+    //    }
+    //    //SW y = -1 x = -1
+    //    else if (MoveInput.x < 0 && MoveInput.y < 0)
+    //    {
+    //        facing = "SouthWest";
+    //    }
+    //    //W y = 0 x = -1
+    //    else if (MoveInput.x < 0 && MoveInput.y == 0)
+    //    {
+    //        facing = "West";
+    //        animator.SetBool("Is_West", true);
+    //        animator.SetBool("Is_South", false);
+    //        animator.SetBool("Is_East", false);
+    //        animator.SetBool("Is_North", false);
+    //    }
+    //    //NW y = 1 x = -1
+    //    else if (MoveInput.x < 0 && MoveInput.y > 0)
+    //    {
+    //        facing = "NorthWest";
+    //    }
+    //}
+
     void currentDirection()
     {
         //N y = 1 x = 0
@@ -133,28 +194,37 @@ public class PlayerInputs : MonoBehaviour
         else if (MoveInput.x > 0 && MoveInput.y > 0)
         {
             facing = "NorthEast";
+            facing = "North";
+            animator.SetBool("Is_North", true);
+            animator.SetBool("Is_South", false);
+            animator.SetBool("Is_East", false);
+            animator.SetBool("Is_West", false);
+
         }
         //E y = 0 x = 1
         else if (MoveInput.x > 0 && MoveInput.y == 0)
         {
             facing = "East";
-            animator.SetBool("Is_East", true);
-            animator.SetBool("Is_South", false);
             animator.SetBool("Is_North", false);
+            animator.SetBool("Is_South", false);
+            animator.SetBool("Is_East", true);
             animator.SetBool("Is_West", false);
-
         }
         //SE y = -1 x = 1
         else if (MoveInput.x > 0 && MoveInput.y < 0)
         {
             facing = "SouthEast";
+            animator.SetBool("Is_North", false);
+            animator.SetBool("Is_South", true);
+            animator.SetBool("Is_East", false);
+            animator.SetBool("Is_West", false);
         }
         //S y = -1 x = 0
         else if (MoveInput.x == 0 && MoveInput.y < 0)
         {
             facing = "South";
-            animator.SetBool("Is_South", true);
             animator.SetBool("Is_North", false);
+            animator.SetBool("Is_South", true);
             animator.SetBool("Is_East", false);
             animator.SetBool("Is_West", false);
         }
@@ -162,20 +232,29 @@ public class PlayerInputs : MonoBehaviour
         else if (MoveInput.x < 0 && MoveInput.y < 0)
         {
             facing = "SouthWest";
+            animator.SetBool("Is_North", false);
+            animator.SetBool("Is_South", true);
+            animator.SetBool("Is_East", false);
+            animator.SetBool("Is_West", false);
         }
         //W y = 0 x = -1
         else if (MoveInput.x < 0 && MoveInput.y == 0)
         {
             facing = "West";
-            animator.SetBool("Is_West", true);
+            animator.SetBool("Is_North", false);
             animator.SetBool("Is_South", false);
             animator.SetBool("Is_East", false);
-            animator.SetBool("Is_North", false);
+            animator.SetBool("Is_West", true);
         }
         //NW y = 1 x = -1
         else if (MoveInput.x < 0 && MoveInput.y > 0)
         {
             facing = "NorthWest";
+            facing = "North";
+            animator.SetBool("Is_North", true);
+            animator.SetBool("Is_South", false);
+            animator.SetBool("Is_East", false);
+            animator.SetBool("Is_West", false);
         }
     }
 
