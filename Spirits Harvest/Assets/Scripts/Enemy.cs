@@ -11,10 +11,18 @@ public class Enemy : MonoBehaviour
     Transform targetPoint;
     Transform currentPoint;
 
+    Animator enemyAnimator;
+
     void Start()
     {
+        startPoint = GameObject.FindGameObjectWithTag("EnemyStartPoint").transform;
         currentPoint = startPoint;
         targetPoint = currentPoint.transform;
+
+        enemyAnimator = GetComponent<Animator>();
+
+        int rand = UnityEngine.Random.Range(0, 7);
+        enemyAnimator.SetInteger("AnimIndex", rand);
     }
 
     void Update()
@@ -42,10 +50,8 @@ public class Enemy : MonoBehaviour
         }
 
         else if(waypoint.nextWaypoints == null || waypoint.nextWaypoints.Length == 0)
-        {    
-            this.gameObject.transform.position = startPoint.position;
-            currentPoint = startPoint;
-            targetPoint = currentPoint.transform;
+        {
+            Destroy(this.gameObject);
             return;
         }
 
