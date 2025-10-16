@@ -48,6 +48,8 @@ public class PlayerManager : MonoBehaviour
 
     bool Carving;
 
+    //[SerializeField] GameObject pumpkLantern;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -194,5 +196,43 @@ public class PlayerManager : MonoBehaviour
     public bool GetCarving()
     {
         return Carving;
+    }
+
+    public bool checkPumpkinMaterials()
+    {
+        //make temp vars and check theres at least 1 pumpkin and 1 candle
+        int tempPum = dict.GetItem("Pumpkin");
+        int tempCand = dict.GetItem("Candle");
+
+        if(tempPum > 0 && tempCand > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void carvePumpkinLantern()
+    {
+        //remove 1 pumpkin and 1 candle and add 1 jackolantern(pumpkin)
+        if(checkPumpkinMaterials())
+        {
+            dict.RemoveItem("Pumpkin", 1);
+            dict.RemoveItem("Candle", 1);
+            dict.AddItem("PumpkinLantern", 1);
+        }
+
+        Debug.Log("PumpkinLantern= " + dict.GetItem("PumpkinLantern"));
+    }
+    public void placePumpkinLantern()
+    {
+        //remove 1 pumpkin lantern if possible and if so, place a pumpkinlantern object
+        int tempLantern = dict.GetItem("PumpkinLantern");
+        if(tempLantern > 0)
+        {
+            dict.RemoveItem("PumpkinLantern", 1);
+            Debug.Log("LanternPlaced");
+        }
     }
 }

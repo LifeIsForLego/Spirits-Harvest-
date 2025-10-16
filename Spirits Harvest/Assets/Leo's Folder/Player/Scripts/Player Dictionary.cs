@@ -28,6 +28,10 @@ public class PlayerDictionary : MonoBehaviour
                 {
                     HeldItems[item] = 15;
                 }
+                else
+                {
+                    HeldItems[item] += value;
+                }
             }
             else
             {
@@ -41,6 +45,10 @@ public class PlayerDictionary : MonoBehaviour
                 if(value >= 15)
                 {
                     HeldItems[item] = 15;
+                }
+                else
+                {
+                    HeldItems[item] = value;
                 }
             }
             else
@@ -56,6 +64,7 @@ public class PlayerDictionary : MonoBehaviour
 
         AddItem("Candle", 0);
         AddItem("Pumpkin", 0);
+        AddItem("PumpkinLantern", 0);
     }
 
     public void RemoveItem(string item, int value)

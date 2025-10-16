@@ -7,12 +7,22 @@ public class CarvingState : BlankState
     {
         Debug.Log("CarvingState");
 
-        player.move.noMove();
+        if(player.checkPumpkinMaterials())
+        {
+            player.move.noMove();
 
-        player.playerMode = false;
-        player.cams.CarvingOn();
-        player.UIc.CarveModeOn();
-        player.draw.ENABLEDON();
+            player.playerMode = false;
+            player.cams.CarvingOn();
+            player.UIc.CarveModeOn();
+            player.draw.ENABLEDON();
+        }
+        else
+        {
+            Debug.Log("cannot carve");
+            player.CarvingOff();
+            player.ChangeState(player.idleState);
+        }
+        
     }
 
     public override void exitState(PlayerManager player)
@@ -23,6 +33,11 @@ public class CarvingState : BlankState
         player.cams.CarvingOff();
         player.UIc.CarveModeOff();
         player.draw.ENABLEDOFF();
+
+        if (player.checkPumpkinMaterials())
+        {
+            player.carvePumpkinLantern();
+        }
     }
 
     public override void Move(PlayerManager player)
