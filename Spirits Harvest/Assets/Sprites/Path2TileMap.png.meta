@@ -1,0 +1,2041 @@
+fileFormatVersion: 2
+guid: 014eeca19a96c7d438790fb5d3bcbfea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8019942454597336726
+    second: Path2TileMap_0
+  - first:
+      213: -6255522891386392443
+    second: Path2TileMap_1
+  - first:
+      213: -5699467723532874061
+    second: Path2TileMap_2
+  - first:
+      213: 7601469738880994958
+    second: Path2TileMap_3
+  - first:
+      213: 1732690007591733146
+    second: Path2TileMap_4
+  - first:
+      213: -2976968973801189753
+    second: Path2TileMap_5
+  - first:
+      213: -6055449374457476153
+    second: Path2TileMap_6
+  - first:
+      213: 4425098081586455060
+    second: Path2TileMap_7
+  - first:
+      213: -4481550157120162980
+    second: Path2TileMap_8
+  - first:
+      213: 1592210897859761451
+    second: Path2TileMap_9
+  - first:
+      213: -5120179970454343077
+    second: Path2TileMap_10
+  - first:
+      213: -7709382438924393483
+    second: Path2TileMap_11
+  - first:
+      213: 5771595047986949062
+    second: Path2TileMap_12
+  - first:
+      213: 8855379778533355579
+    second: Path2TileMap_13
+  - first:
+      213: -3472660518581539174
+    second: Path2TileMap_14
+  - first:
+      213: -5678567945502359272
+    second: Path2TileMap_15
+  - first:
+      213: -6728433925992526689
+    second: Path2TileMap_16
+  - first:
+      213: -371606141582847964
+    second: Path2TileMap_17
+  - first:
+      213: -2513021654745774907
+    second: Path2TileMap_18
+  - first:
+      213: 6655809517716792699
+    second: Path2TileMap_19
+  - first:
+      213: -212849015004365831
+    second: Path2TileMap_20
+  - first:
+      213: -5242969480271345189
+    second: Path2TileMap_21
+  - first:
+      213: -2543008877740583180
+    second: Path2TileMap_22
+  - first:
+      213: 8647437831298809779
+    second: Path2TileMap_23
+  - first:
+      213: 2897351888472215853
+    second: Path2TileMap_24
+  - first:
+      213: -861438305464059655
+    second: Path2TileMap_25
+  - first:
+      213: -4887490533383279894
+    second: Path2TileMap_26
+  - first:
+      213: -5256089218596973418
+    second: Path2TileMap_27
+  - first:
+      213: -5990072618622464870
+    second: Path2TileMap_28
+  - first:
+      213: -4177227096051044037
+    second: Path2TileMap_29
+  - first:
+      213: -4480248492306267639
+    second: Path2TileMap_30
+  - first:
+      213: 5165856749182228052
+    second: Path2TileMap_31
+  - first:
+      213: 55622606711438555
+    second: Path2TileMap_32
+  - first:
+      213: -937598596824360062
+    second: Path2TileMap_33
+  - first:
+      213: 2806300246857582003
+    second: Path2TileMap_34
+  - first:
+      213: 2179288193669438544
+    second: Path2TileMap_35
+  - first:
+      213: 7514014181377643768
+    second: Path2TileMap_36
+  - first:
+      213: 4200913601110014859
+    second: Path2TileMap_37
+  - first:
+      213: 5611407906248097111
+    second: Path2TileMap_38
+  - first:
+      213: -3779484520443181988
+    second: Path2TileMap_39
+  - first:
+      213: -1260115814607469238
+    second: Path2TileMap_40
+  - first:
+      213: -6533264315075942313
+    second: Path2TileMap_41
+  - first:
+      213: -1899949272247339318
+    second: Path2TileMap_42
+  - first:
+      213: -3485457890052046149
+    second: Path2TileMap_43
+  - first:
+      213: -4204906891707078505
+    second: Path2TileMap_44
+  - first:
+      213: -6263434820806949393
+    second: Path2TileMap_45
+  - first:
+      213: -7921461028031248507
+    second: Path2TileMap_46
+  - first:
+      213: -9093865732930922342
+    second: Path2TileMap_47
+  - first:
+      213: -759460727825108586
+    second: Path2TileMap_48
+  - first:
+      213: 8534723491099626013
+    second: Path2TileMap_49
+  - first:
+      213: 1677925584547333383
+    second: Path2TileMap_50
+  - first:
+      213: 6162581208481498549
+    second: Path2TileMap_51
+  - first:
+      213: 2345559046236446301
+    second: Path2TileMap_52
+  - first:
+      213: 3830852808444970867
+    second: Path2TileMap_53
+  - first:
+      213: -1803508626445802007
+    second: Path2TileMap_54
+  - first:
+      213: 1745576321200972136
+    second: Path2TileMap_55
+  - first:
+      213: 3408904144294191500
+    second: Path2TileMap_56
+  - first:
+      213: -7609649319243431344
+    second: Path2TileMap_57
+  - first:
+      213: 1101743586796552503
+    second: Path2TileMap_58
+  - first:
+      213: 5215298319143541284
+    second: Path2TileMap_59
+  - first:
+      213: -2821164127662822577
+    second: Path2TileMap_60
+  - first:
+      213: -7602773324119362410
+    second: Path2TileMap_61
+  - first:
+      213: 713303663377322217
+    second: Path2TileMap_62
+  - first:
+      213: -1267993217854184939
+    second: Path2TileMap_63
+  - first:
+      213: 1827249678298673620
+    second: Path2TileMap_64
+  - first:
+      213: -986256501917676420
+    second: Path2TileMap_65
+  - first:
+      213: 5308511659786592706
+    second: Path2TileMap_66
+  - first:
+      213: -6968291619590395855
+    second: Path2TileMap_67
+  - first:
+      213: 1560948532683734969
+    second: Path2TileMap_68
+  - first:
+      213: -1694557613107215646
+    second: Path2TileMap_69
+  - first:
+      213: -8550474734771262530
+    second: Path2TileMap_70
+  - first:
+      213: -6686451161289003625
+    second: Path2TileMap_71
+  - first:
+      213: 8297850558798683232
+    second: Path2TileMap_72
+  - first:
+      213: 3773479077678418418
+    second: Path2TileMap_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 35.9
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Path2TileMap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61c6aa34d073b090800000000000000
+      internalID: -8019942454597336726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 580f69ec21bef29a0800000000000000
+      internalID: -6255522891386392443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bec4027d4c67e0b0800000000000000
+      internalID: -5699467723532874061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_3
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e02e40478dd7960800000000000000
+      internalID: 7601469738880994958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97cf58b160cb0810800000000000000
+      internalID: 1732690007591733146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_5
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e8831bd7eafa6d0800000000000000
+      internalID: -2976968973801189753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cbc91880e8b6fba0800000000000000
+      internalID: -6055449374457476153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4122931924b196d30800000000000000
+      internalID: 4425098081586455060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_8
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53b1c950e55ec1c0800000000000000
+      internalID: -4481550157120162980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_9
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25df6e206ba81610800000000000000
+      internalID: 1592210897859761451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_10
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52bffad17771f8b0800000000000000
+      internalID: -5120179970454343077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_11
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3e6429485c20590800000000000000
+      internalID: -7709382438924393483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_12
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb6aaeed13d81050800000000000000
+      internalID: 5771595047986949062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_13
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3078a2adf0a4ea70800000000000000
+      internalID: 8855379778533355579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e6c6448a1aecfc0800000000000000
+      internalID: -3472660518581539174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_15
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81189673a8ca131b0800000000000000
+      internalID: -5678567945502359272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_16
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c478a3efccf92a0800000000000000
+      internalID: -6728433925992526689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_17
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420d99ede2ac7daf0800000000000000
+      internalID: -371606141582847964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_18
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4830c9e14ff1dd0800000000000000
+      internalID: -2513021654745774907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_19
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b756c2c0e7f2e5c50800000000000000
+      internalID: 6655809517716792699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_20
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb7fd5d2fecb0df0800000000000000
+      internalID: -212849015004365831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_21
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd94630490b3d37b0800000000000000
+      internalID: -5242969480271345189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_22
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 324
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f69b9d26ea65bcd0800000000000000
+      internalID: -2543008877740583180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_23
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 286
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bff6d734eed10870800000000000000
+      internalID: 8647437831298809779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2191b51136753820800000000000000
+      internalID: 2897351888472215853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f876eedc6e8b04f0800000000000000
+      internalID: -861438305464059655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_26
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeaea9241452c2cb0800000000000000
+      internalID: -4887490533383279894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_27
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69454c124be9e07b0800000000000000
+      internalID: -5256089218596973418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_28
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9cc63ca0bcfedca0800000000000000
+      internalID: -5990072618622464870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_29
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31bdb986128706c0800000000000000
+      internalID: -4177227096051044037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_30
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9020b9ecbb5f2d1c0800000000000000
+      internalID: -4480248492306267639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_31
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4569f8fe75fc0b740800000000000000
+      internalID: 5165856749182228052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_32
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc3482577c95c000800000000000000
+      internalID: 55622606711438555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_33
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b11663b0bfcf2f0800000000000000
+      internalID: -937598596824360062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_34
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b58903c43bf1f620800000000000000
+      internalID: 2806300246857582003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_35
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c9ed6d0136e3e10800000000000000
+      internalID: 2179288193669438544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_36
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f413464614274860800000000000000
+      internalID: 7514014181377643768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_37
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bf44ea9a4ac4a30800000000000000
+      internalID: 4200913601110014859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_38
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d7cbd92c9bfdd40800000000000000
+      internalID: 5611407906248097111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_39
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5485ec6ad29c8bc0800000000000000
+      internalID: -3779484520443181988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_40
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45487ec75b238ee0800000000000000
+      internalID: -1260115814607469238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_41
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758a92c58be2555a0800000000000000
+      internalID: -6533264315075942313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_42
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac67f68043602a5e0800000000000000
+      internalID: -1899949272247339318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_43
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb28dd7048a21afc0800000000000000
+      internalID: -3485457890052046149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_44
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7982536e57b25a5c0800000000000000
+      internalID: -4204906891707078505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_45
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe54dff273fc319a0800000000000000
+      internalID: -6263434820806949393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_46
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 248
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587c81a2a21511290800000000000000
+      internalID: -7921461028031248507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_47
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 210
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a981e891c491cc180800000000000000
+      internalID: -9093865732930922342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691ff19ed7ad575f0800000000000000
+      internalID: -759460727825108586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_49
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1acc27dbcd617670800000000000000
+      internalID: 8534723491099626013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_50
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705cb7add60394710800000000000000
+      internalID: 1677925584547333383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_51
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b5890755f2e58550800000000000000
+      internalID: 6162581208481498549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_52
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e90a676891d8020800000000000000
+      internalID: 2345559046236446301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_53
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3778b22255ce92530800000000000000
+      internalID: 3830852808444970867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_54
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e5685ba576a8f6e0800000000000000
+      internalID: -1803508626445802007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_55
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86164896a68893810800000000000000
+      internalID: 1745576321200972136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_56
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c812302124cde4f20800000000000000
+      internalID: 3408904144294191500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_57
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052c3350348156690800000000000000
+      internalID: -7609649319243431344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_58
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 731c29474fd2a4f00800000000000000
+      internalID: 1101743586796552503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_59
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42a1e3e7036706840800000000000000
+      internalID: 5215298319143541284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_60
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b259d4c2639d8d0800000000000000
+      internalID: -2821164127662822577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_61
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694bc0461f58d7690800000000000000
+      internalID: -7602773324119362410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_62
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0179017e926e900800000000000000
+      internalID: 713303663377322217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_63
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5126230f2ee276ee0800000000000000
+      internalID: -1267993217854184939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_64
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d170f6b6e1bb5910800000000000000
+      internalID: 1827249678298673620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_65
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c07c9dfec1052f0800000000000000
+      internalID: -986256501917676420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_66
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c169979a3f9ba940800000000000000
+      internalID: 5308511659786592706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_67
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138abfa01b7ab4f90800000000000000
+      internalID: -6968291619590395855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_68
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 172
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bff7439b6a99a510800000000000000
+      internalID: 1560948532683734969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_69
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 134
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e28f4b34d8bb78e0800000000000000
+      internalID: -1694557613107215646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_70
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 96
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebba105f78c965980800000000000000
+      internalID: -8550474734771262530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_71
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 96
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79dee5b5814f433a0800000000000000
+      internalID: -6686451161289003625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_72
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 96
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06cd87c8e13e72370800000000000000
+      internalID: 8297850558798683232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path2TileMap_73
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 96
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f904687a371e5430800000000000000
+      internalID: 3773479077678418418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6d10604346d099c4f867627eaadc0a62
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Path2TileMap_0: -8019942454597336726
+      Path2TileMap_1: -6255522891386392443
+      Path2TileMap_10: -5120179970454343077
+      Path2TileMap_11: -7709382438924393483
+      Path2TileMap_12: 5771595047986949062
+      Path2TileMap_13: 8855379778533355579
+      Path2TileMap_14: -3472660518581539174
+      Path2TileMap_15: -5678567945502359272
+      Path2TileMap_16: -6728433925992526689
+      Path2TileMap_17: -371606141582847964
+      Path2TileMap_18: -2513021654745774907
+      Path2TileMap_19: 6655809517716792699
+      Path2TileMap_2: -5699467723532874061
+      Path2TileMap_20: -212849015004365831
+      Path2TileMap_21: -5242969480271345189
+      Path2TileMap_22: -2543008877740583180
+      Path2TileMap_23: 8647437831298809779
+      Path2TileMap_24: 2897351888472215853
+      Path2TileMap_25: -861438305464059655
+      Path2TileMap_26: -4887490533383279894
+      Path2TileMap_27: -5256089218596973418
+      Path2TileMap_28: -5990072618622464870
+      Path2TileMap_29: -4177227096051044037
+      Path2TileMap_3: 7601469738880994958
+      Path2TileMap_30: -4480248492306267639
+      Path2TileMap_31: 5165856749182228052
+      Path2TileMap_32: 55622606711438555
+      Path2TileMap_33: -937598596824360062
+      Path2TileMap_34: 2806300246857582003
+      Path2TileMap_35: 2179288193669438544
+      Path2TileMap_36: 7514014181377643768
+      Path2TileMap_37: 4200913601110014859
+      Path2TileMap_38: 5611407906248097111
+      Path2TileMap_39: -3779484520443181988
+      Path2TileMap_4: 1732690007591733146
+      Path2TileMap_40: -1260115814607469238
+      Path2TileMap_41: -6533264315075942313
+      Path2TileMap_42: -1899949272247339318
+      Path2TileMap_43: -3485457890052046149
+      Path2TileMap_44: -4204906891707078505
+      Path2TileMap_45: -6263434820806949393
+      Path2TileMap_46: -7921461028031248507
+      Path2TileMap_47: -9093865732930922342
+      Path2TileMap_48: -759460727825108586
+      Path2TileMap_49: 8534723491099626013
+      Path2TileMap_5: -2976968973801189753
+      Path2TileMap_50: 1677925584547333383
+      Path2TileMap_51: 6162581208481498549
+      Path2TileMap_52: 2345559046236446301
+      Path2TileMap_53: 3830852808444970867
+      Path2TileMap_54: -1803508626445802007
+      Path2TileMap_55: 1745576321200972136
+      Path2TileMap_56: 3408904144294191500
+      Path2TileMap_57: -7609649319243431344
+      Path2TileMap_58: 1101743586796552503
+      Path2TileMap_59: 5215298319143541284
+      Path2TileMap_6: -6055449374457476153
+      Path2TileMap_60: -2821164127662822577
+      Path2TileMap_61: -7602773324119362410
+      Path2TileMap_62: 713303663377322217
+      Path2TileMap_63: -1267993217854184939
+      Path2TileMap_64: 1827249678298673620
+      Path2TileMap_65: -986256501917676420
+      Path2TileMap_66: 5308511659786592706
+      Path2TileMap_67: -6968291619590395855
+      Path2TileMap_68: 1560948532683734969
+      Path2TileMap_69: -1694557613107215646
+      Path2TileMap_7: 4425098081586455060
+      Path2TileMap_70: -8550474734771262530
+      Path2TileMap_71: -6686451161289003625
+      Path2TileMap_72: 8297850558798683232
+      Path2TileMap_73: 3773479077678418418
+      Path2TileMap_8: -4481550157120162980
+      Path2TileMap_9: 1592210897859761451
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 6202fbd602006e44793034218a5b7275
+guid: 25f907e6e2a1adf4aa46c25fc5b04ea2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5908327983602914153
-    second: Path_0
+      213: 6538832253461963018
+    second: Witch tent_0
+  - first:
+      213: 1940377766245299250
+    second: Witch tent_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Path_0
+      name: Witch tent_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 139
-        width: 2560
-        height: 1262
+        x: 16
+        y: 20
+        width: 28
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79c29d8a007610ea0800000000000000
-      internalID: -5908327983602914153
+      spriteID: a01a7715a499eba50800000000000000
+      internalID: 6538832253461963018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Witch tent_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 20
+        width: 69
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234fd1f3c4b9dea10800000000000000
+      internalID: 1940377766245299250
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: eb04c81c41dc0a14397a9013d66209c7
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Path_0: -5908327983602914153
+      Witch tent_0: 6538832253461963018
+      Witch tent_1: 1940377766245299250
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
