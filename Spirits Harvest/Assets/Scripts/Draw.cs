@@ -177,6 +177,7 @@ public class Draw : MonoBehaviour
         }
 
         SetTexture();
+        finishedButtonPressed = false;
     }
 
     public void ENABLEDON()
@@ -186,6 +187,7 @@ public class Draw : MonoBehaviour
     public void ENABLEDOFF()
     {
         ENABLED = false;
+        ResetColour();
     }
     public bool GETENABLED()
     {
