@@ -9,22 +9,32 @@ public class PlayerManager : MonoBehaviour
     public PlayerDictionary dict;
     public Animator animator;
 
+    public CameraManager cams;
+    public UICarve UIc;
+    public Draw draw;
+
     //Tool Managers:
     public BroomManager broom;
+    public PumpkinLanternManager pumpLantern;
 
     BlankState currentState;
     public IdleState idleState = new IdleState();
     public MoveState moveState = new MoveState();
     public InteractionState interactionState = new InteractionState();
     public ToolState toolState = new ToolState();
+    public CarvingState carvingState = new CarvingState();
 
     BasicTool currentTool;
     BasicTool Tool1;
     BasicTool Tool2;
     BasicTool Tool3;
+    BasicTool Tool4;
     public HarvestTool harvestTool = new HarvestTool();
     public PumpkinSeed pumpkinSeed = new PumpkinSeed();
     public BroomTool broomTool = new BroomTool();
+    public PumpkinLanternTool planternTool = new PumpkinLanternTool();
+
+    public bool playerMode;
 
     public bool interacting;
     public float interactTick;
@@ -40,10 +50,16 @@ public class PlayerManager : MonoBehaviour
     bool usingTool;
     float toolTimer;
 
+    bool Carving;
+
+    //[SerializeField] GameObject pumpkLantern;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerMode = true;
+
         player = PlayerInputs.GetInstance().gameObject;
         inputs = player.GetComponent<PlayerInputs>();
         move = player.GetComponent<PlayerMovement>();
@@ -51,6 +67,7 @@ public class PlayerManager : MonoBehaviour
         animator = GetComponent<Animator>();
 
         broom = player.GetComponent<BroomManager>();
+        pumpLantern = player.GetComponent<PumpkinLanternManager>();
 
         currentState = idleState;
         currentState.enterState(this);
@@ -58,6 +75,7 @@ public class PlayerManager : MonoBehaviour
         Tool1 = harvestTool;
         Tool2 = pumpkinSeed;
         Tool3 = broomTool;
+        Tool4 = planternTool;
         currentTool = Tool1;
 
         interacting = false;
@@ -81,7 +99,10 @@ public class PlayerManager : MonoBehaviour
     {
         currentState.updateState(this);
 
-        HandleTools();
+        if (playerMode)
+        {
+            HandleTools();
+        }
     }
 
     public void ChangeState(BlankState state)
@@ -110,6 +131,10 @@ public class PlayerManager : MonoBehaviour
         else if (inputs.tool3Input)
         {
             SwapTool(Tool3);
+        }
+        else if(inputs.tool4Input)
+        {
+            SwapTool(Tool4);
         }
     }
 
@@ -169,6 +194,59 @@ public class PlayerManager : MonoBehaviour
         else
         {
             toolTimer -= Time.deltaTime;
+        }
+    }
+
+    public void CarvingOn()
+    {
+        Carving = true;
+    }
+    public void CarvingOff()
+    {
+        Carving = false;
+    }
+    public bool GetCarving()
+    {
+        return Carving;
+    }
+
+    public bool checkPumpkinMaterials()
+    {
+        //make temp vars and check theres at least 1 pumpkin and 1 candle
+        int tempPum = dict.GetItem("Pumpkin");
+        int tempCand = dict.GetItem("Candle");
+
+        if(tempPum > 0 && tempCand > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void carvePumpkinLantern()
+    {
+        //remove 1 pumpkin and 1 candle and add 1 jackolantern(pumpkin)
+        if(checkPumpkinMaterials())
+        {
+            dict.RemoveItem("Pumpkin", 1);
+            dict.RemoveItem("Candle", 1);
+            dict.AddItem("PumpkinLantern", 1);
+        }
+    }
+    public void placePumpkinLantern()
+    {
+        //remove 1 pumpkin lantern if possible and if so, place a pumpkinlantern object
+        int tempLantern = dict.GetItem("PumpkinLantern");
+        if(tempLantern > 0)
+        {
+            dict.RemoveItem("PumpkinLantern", 1);
+            Debug.Log("LanternPlaced");
+        }
+        else
+        {
+            Debug.Log("no Lantern");
         }
     }
 }

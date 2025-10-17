@@ -28,6 +28,10 @@ public class PlayerDictionary : MonoBehaviour
                 {
                     HeldItems[item] = 15;
                 }
+                else
+                {
+                    HeldItems[item] += value;
+                }
             }
             else
             {
@@ -41,6 +45,10 @@ public class PlayerDictionary : MonoBehaviour
                 if(value >= 15)
                 {
                     HeldItems[item] = 15;
+                }
+                else
+                {
+                    HeldItems[item] = value;
                 }
             }
             else
@@ -56,6 +64,7 @@ public class PlayerDictionary : MonoBehaviour
 
         AddItem("Candle", 0);
         AddItem("Pumpkin", 0);
+        AddItem("PumpkinLantern", 0);
     }
 
     public void RemoveItem(string item, int value)
@@ -68,8 +77,9 @@ public class PlayerDictionary : MonoBehaviour
         else
         {
             int newValue = HeldItems[item] - value; //sets a new value which is the currently held value - value to remove
+            //Debug.Log(newValue);
 
-            if(newValue <= 0) //if the new value is equal to or below 0, it removes the item completely
+            if(newValue < 0) //if the new value is equal to or below 0, it removes the item completely
             {
                 //HeldItems.Remove(item);
             }

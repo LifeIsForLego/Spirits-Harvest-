@@ -42,7 +42,7 @@ public class BroomManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(toolEnabled)
+        if(toolEnabled && manager.playerMode)
         {
             
             if (inputs.useInput && OffCooldown)

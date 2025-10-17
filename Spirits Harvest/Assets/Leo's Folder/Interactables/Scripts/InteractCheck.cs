@@ -26,14 +26,17 @@ public class InteractCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canInteract && inputs.InteractInput)
+        if (manager.playerMode)
         {
-            manager.InteractionStart(item,value); //for the love of god put "null" and 0 if you want them blank
-            if (oneTime)
+            if (canInteract && inputs.InteractInput)
             {
-                Timer = manager.GetInteractTick();
-                Debug.Log(Timer);
-                StartCoroutine(DeleteSelf());
+                manager.InteractionStart(item, value); //for the love of god put "null" and 0 if you want them blank
+                if (oneTime)
+                {
+                    Timer = manager.GetInteractTick();
+                    Debug.Log(Timer);
+                    StartCoroutine(DeleteSelf());
+                }
             }
         }
     }

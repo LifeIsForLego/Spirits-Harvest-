@@ -48,7 +48,11 @@ public class MoveState : BlankState
     {
         if (player != null)
         {
-            if (player.interacting)
+            if (player.GetCarving())
+            {
+                player.ChangeState(player.carvingState);
+            }
+            else if(player.interacting)
             {
                 player.ChangeState(player.interactionState);
             }

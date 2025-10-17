@@ -18,4 +18,4 @@ MonoBehaviour:
   value: 0
   Interactable: 0
   canPlant: 0
-  growthTimer: 2
+  growthTimer: 5
