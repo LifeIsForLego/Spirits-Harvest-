@@ -8,6 +8,9 @@ public class CameraManager : MonoBehaviour
     [SerializeField] GameObject drawingPlace;
     Transform drawingTransform;
 
+    [SerializeField] GameObject playingPlace;
+    Transform playingTransform;
+
     [SerializeField] bool Carving;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,6 +20,7 @@ public class CameraManager : MonoBehaviour
         playerTransform = player.transform;
 
         drawingTransform = drawingPlace.transform;
+        playingTransform = playingPlace.transform;
 
         Carving = false;
     }
@@ -44,8 +48,9 @@ public class CameraManager : MonoBehaviour
         }
         else
         {
-            transform.localPosition = playerTransform.localPosition;
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -10);
+            //transform.localPosition = playerTransform.localPosition;
+            //transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, -10);
+            transform.localPosition = playingTransform.localPosition;
         }
     }
 }
