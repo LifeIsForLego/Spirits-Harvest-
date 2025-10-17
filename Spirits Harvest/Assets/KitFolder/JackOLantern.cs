@@ -44,7 +44,7 @@ public class JackOLantern : MonoBehaviour
 
     public void lanternDoDamage()
     {
-        Instantiate(projectile, pumpkin.transform.position, Quaternion.identity);
+        Instantiate(projectile, transform.position, Quaternion.identity);
         
 
     }
