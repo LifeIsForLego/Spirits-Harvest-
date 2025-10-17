@@ -9,6 +9,8 @@ public class PumpkinLanternManager : MonoBehaviour
     PlayerInputs inputs;
     PlayerManager manager;
 
+    [SerializeField]GameObject Lantern;
+
     float Duration;
     float Timer;
     bool canPlace;
@@ -35,6 +37,8 @@ public class PumpkinLanternManager : MonoBehaviour
             if (inputs.useInput && canPlace && !OnLantern)
             {
                 manager.placePumpkinLantern();
+                Instantiate(Lantern, transform.position, Quaternion.identity);
+                StartTimer();
             }
         }
     }

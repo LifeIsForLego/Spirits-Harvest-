@@ -9820,6 +9820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6670901215763386743, guid: 87bbccbc1b18b4840a028f8301db898e, type: 3}
+      propertyPath: Lantern
+      value: 
+      objectReference: {fileID: 2912071739083783899, guid: 9bc3ec8b3b91de547b5e3db879dfc073, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
