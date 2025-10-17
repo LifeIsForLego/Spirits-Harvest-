@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Enemy
   - EnemyStartPoint
-  - Projectile
-  - Lantern
   layers:
   - Default
   - TransparentFX
